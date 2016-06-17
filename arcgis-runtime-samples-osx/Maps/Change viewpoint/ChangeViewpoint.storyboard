@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B30a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="5QP-hu-o3N">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+    </dependencies>
+    <scenes>
+        <!--Change Viewpoint View Controller-->
+        <scene sceneID="DQe-EF-Lzh">
+            <objects>
+                <viewController id="5QP-hu-o3N" customClass="ChangeViewpointViewController" customModule="OSXSampleViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="1U4-HF-Hqk">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="73N-53-Soc" customClass="AGSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="260"/>
+                                <animations/>
+                            </customView>
+                            <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e6i-07-28D">
+                                <rect key="frame" x="52" y="267" width="346" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="mcW-cp-1lm"/>
+                                </constraints>
+                                <animations/>
+                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="zkC-sB-h9d">
+                                    <font key="font" metaFont="system"/>
+                                    <segments>
+                                        <segment label="Geometry" width="113"/>
+                                        <segment label="Center &amp; Scale" width="113" tag="1"/>
+                                        <segment label="Animate" width="112"/>
+                                    </segments>
+                                </segmentedCell>
+                                <connections>
+                                    <action selector="valueChanged:" target="5QP-hu-o3N" id="z8S-Jx-Ez7"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="73N-53-Soc" firstAttribute="leading" secondItem="1U4-HF-Hqk" secondAttribute="leading" id="50u-H7-9Nk"/>
+                            <constraint firstAttribute="bottom" secondItem="73N-53-Soc" secondAttribute="bottom" id="Aou-fk-yDU"/>
+                            <constraint firstAttribute="trailing" secondItem="73N-53-Soc" secondAttribute="trailing" id="Gkr-Lf-qCd"/>
+                            <constraint firstItem="e6i-07-28D" firstAttribute="top" secondItem="1U4-HF-Hqk" secondAttribute="top" constant="9" id="Zh7-Pb-1JH"/>
+                            <constraint firstItem="e6i-07-28D" firstAttribute="centerX" secondItem="1U4-HF-Hqk" secondAttribute="centerX" id="fkD-D2-P9s"/>
+                            <constraint firstItem="73N-53-Soc" firstAttribute="top" secondItem="1U4-HF-Hqk" secondAttribute="top" constant="40" id="uu8-mi-5RL"/>
+                        </constraints>
+                        <animations/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="73N-53-Soc" id="VnX-oA-rHV"/>
+                        <outlet property="segmentedControl" destination="e6i-07-28D" id="wE1-E3-Qtj"/>
+                    </connections>
+                </viewController>
+                <customObject id="M1C-Y8-u6t" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="445" y="414"/>
+        </scene>
+    </scenes>
+</document>
