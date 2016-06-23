@@ -470,6 +470,18 @@
                         <string>ExtrudeGraphicsViewController</string>
                     </array>
                 </dict>
+                <dict>
+                    <key>displayName</key>
+                    <string>3D symbols</string>
+                    <key>storyboardName</key>
+                    <string>SceneSymbols</string>
+                    <key>descriptionText</key>
+                    <string>The sample shows how to create symbols with different 3D shapes</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>SceneSymbolsViewController</string>
+                    </array>
+                </dict>
             </array>
         </dict>
     </array>
