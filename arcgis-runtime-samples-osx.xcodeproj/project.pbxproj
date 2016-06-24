@@ -25,6 +25,9 @@
 		3E53C6E91D1B55880054B5C8 /* SceneSymbols.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E53C6E71D1B55880054B5C8 /* SceneSymbols.storyboard */; };
 		3E53C6EA1D1B55880054B5C8 /* SceneSymbolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E53C6E81D1B55880054B5C8 /* SceneSymbolsViewController.swift */; };
 		3E53C6EB1D1B5CA20054B5C8 /* SceneSymbolsViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E53C6E81D1B55880054B5C8 /* SceneSymbolsViewController.swift */; };
+		3E53C7381D1D9CED0054B5C8 /* SurfacePlacements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E53C7361D1D9CED0054B5C8 /* SurfacePlacements.storyboard */; };
+		3E53C7391D1D9CED0054B5C8 /* SurfacePlacementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E53C7371D1D9CED0054B5C8 /* SurfacePlacementsViewController.swift */; };
+		3E53C73A1D1D9D4A0054B5C8 /* SurfacePlacementsViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E53C7371D1D9CED0054B5C8 /* SurfacePlacementsViewController.swift */; };
 		3E69DE301CFE2826001F65F7 /* OpenExistingMapViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E8724901BC710DA006386C1 /* OpenExistingMapViewController.swift */; };
 		3E69DE311CFE2826001F65F7 /* ExistingMapsListViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3ECCFE351BCC6FD300CE256D /* ExistingMapsListViewController.swift */; };
 		3E69DE321CFE2826001F65F7 /* ChangeBasemapViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3ECCFE021BC86A6D00CE256D /* ChangeBasemapViewController.swift */; };
@@ -109,6 +112,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				3E53C73A1D1D9D4A0054B5C8 /* SurfacePlacementsViewController.swift in CopyFiles */,
 				3E53C6EB1D1B5CA20054B5C8 /* SceneSymbolsViewController.swift in CopyFiles */,
 				3E865A451D088E9900368F32 /* DisplaySceneViewController.swift in CopyFiles */,
 				3E865A461D088E9900368F32 /* ExtrudeGraphicsViewController.swift in CopyFiles */,
@@ -158,6 +162,8 @@
 		3E495C4D1D076CD40021CD95 /* DisplayScene.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DisplayScene.storyboard; path = "3D/Display a scene/DisplayScene.storyboard"; sourceTree = "<group>"; };
 		3E53C6E71D1B55880054B5C8 /* SceneSymbols.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SceneSymbols.storyboard; sourceTree = "<group>"; };
 		3E53C6E81D1B55880054B5C8 /* SceneSymbolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneSymbolsViewController.swift; sourceTree = "<group>"; };
+		3E53C7361D1D9CED0054B5C8 /* SurfacePlacements.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SurfacePlacements.storyboard; sourceTree = "<group>"; };
+		3E53C7371D1D9CED0054B5C8 /* SurfacePlacementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurfacePlacementsViewController.swift; sourceTree = "<group>"; };
 		3E69DE451CFE2DEC001F65F7 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WindowController.swift; path = Controllers/WindowController.swift; sourceTree = "<group>"; };
 		3E69DE471CFE34A3001F65F7 /* ReadmeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadmeViewController.swift; path = Controllers/ReadmeViewController.swift; sourceTree = "<group>"; };
 		3E69DE4A1CFE43EA001F65F7 /* SearchEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchEngine.swift; sourceTree = "<group>"; };
@@ -309,6 +315,7 @@
 				3E495C4C1D076C1D0021CD95 /* Display a scene */,
 				3E495C411D0633F40021CD95 /* Extrude graphics */,
 				3E53C6E61D1B55880054B5C8 /* 3D symbols */,
+				3E53C7351D1D9CED0054B5C8 /* Surface placements */,
 			);
 			name = 3D;
 			sourceTree = "<group>";
@@ -340,6 +347,16 @@
 			name = "3D symbols";
 			path = "3D/3D symbols";
 			sourceTree = "<group>";
+		};
+		3E53C7351D1D9CED0054B5C8 /* Surface placements */ = {
+			isa = PBXGroup;
+			children = (
+				3E53C7361D1D9CED0054B5C8 /* SurfacePlacements.storyboard */,
+				3E53C7371D1D9CED0054B5C8 /* SurfacePlacementsViewController.swift */,
+			);
+			name = "Surface placements";
+			path = "arcgis-runtime-samples-osx/3D/Surface placements";
+			sourceTree = SOURCE_ROOT;
 		};
 		3E7C0E351CF90F0000200B6E /* Js */ = {
 			isa = PBXGroup;
@@ -666,6 +683,7 @@
 				3ECCFE341BCC4FFC00CE256D /* ShowMagnifier.storyboard in Resources */,
 				3E049A471CED1F460031ADA9 /* VectorTileLayer.storyboard in Resources */,
 				3E7C0E3D1CF90F0000200B6E /* xcode.css in Resources */,
+				3E53C7381D1D9CED0054B5C8 /* SurfacePlacements.storyboard in Resources */,
 				3ECCFE2A1BCC30F500CE256D /* HighwayJson.txt in Resources */,
 				3E495C4E1D076CD40021CD95 /* DisplayScene.storyboard in Resources */,
 				3EC1AE741BAC8DA100E32B1D /* Main.storyboard in Resources */,
@@ -712,6 +730,7 @@
 				3E049A371CED132F0031ADA9 /* CalloutViewController.swift in Sources */,
 				3E8724911BC710DA006386C1 /* OpenExistingMapViewController.swift in Sources */,
 				3E049A351CED132F0031ADA9 /* GraphicsWithSymbolsViewController.swift in Sources */,
+				3E53C7391D1D9CED0054B5C8 /* SurfacePlacementsViewController.swift in Sources */,
 				3E049A121CEA6FE10031ADA9 /* SaveMapViewController.swift in Sources */,
 				3ECCFE121BC86E4800CE256D /* SetInitialMapLocationViewController.swift in Sources */,
 				3ECCFE0D1BC86D1100CE256D /* SetInitialMapAreaViewController.swift in Sources */,
