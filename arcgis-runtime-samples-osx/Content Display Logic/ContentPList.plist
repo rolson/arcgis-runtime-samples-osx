@@ -494,6 +494,18 @@
                         <string>SurfacePlacementsViewController</string>
                     </array>
                 </dict>
+                <dict>
+                    <key>displayName</key>
+                    <string>Use scene layer</string>
+                    <key>storyboardName</key>
+                    <string>UseSceneLayer</string>
+                    <key>descriptionText</key>
+                    <string>The sample shows how to use a scene layer in a scene</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>UseSceneLayerViewController</string>
+                    </array>
+                </dict>
             </array>
         </dict>
     </array>
