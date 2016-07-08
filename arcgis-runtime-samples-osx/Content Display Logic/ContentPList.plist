@@ -439,6 +439,18 @@
  <string></string>
  </array>-->
 <!--                </dict>-->
+                <dict>
+                    <key>displayName</key>
+                    <string>Simple renderer</string>
+                    <key>storyboardName</key>
+                    <string>SimpleRenderer</string>
+                    <key>descriptionText</key>
+                    <string>This sample demonstrates how to create a simple renderer and add it to a graphics overlay</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>SimpleRendererViewController</string>
+                    </array>
+                </dict>
             </array>
         </dict>
         <dict>
