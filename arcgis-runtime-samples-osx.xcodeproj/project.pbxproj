@@ -74,6 +74,9 @@
 		3EBA254F1D30204700AB0703 /* SimpleRendererViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBA254E1D30204700AB0703 /* SimpleRendererViewController.swift */; };
 		3EBA25511D30206400AB0703 /* SimpleRenderer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBA25501D30206400AB0703 /* SimpleRenderer.storyboard */; };
 		3EBA25521D30256C00AB0703 /* SimpleRendererViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3EBA254E1D30204700AB0703 /* SimpleRendererViewController.swift */; };
+		3EBA25551D30264A00AB0703 /* UniqueValueRenderer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBA25541D30264A00AB0703 /* UniqueValueRenderer.storyboard */; };
+		3EBA25571D30266B00AB0703 /* UniqueValueRendererViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBA25561D30266B00AB0703 /* UniqueValueRendererViewController.swift */; };
+		3EBA25581D30273100AB0703 /* UniqueValueRendererViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3EBA25561D30266B00AB0703 /* UniqueValueRendererViewController.swift */; };
 		3EC1AE6D1BAC8DA100E32B1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1AE6C1BAC8DA100E32B1D /* AppDelegate.swift */; };
 		3EC1AE6F1BAC8DA100E32B1D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1AE6E1BAC8DA100E32B1D /* MainViewController.swift */; };
 		3EC1AE711BAC8DA100E32B1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EC1AE701BAC8DA100E32B1D /* Assets.xcassets */; };
@@ -109,6 +112,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				3EBA25581D30273100AB0703 /* UniqueValueRendererViewController.swift in CopyFiles */,
 				3EBA25521D30256C00AB0703 /* SimpleRendererViewController.swift in CopyFiles */,
 				3E865A451D088E9900368F32 /* DisplaySceneViewController.swift in CopyFiles */,
 				3E865A461D088E9900368F32 /* ExtrudeGraphicsViewController.swift in CopyFiles */,
@@ -183,6 +187,8 @@
 		3E913DC31CE660BD000375C8 /* AuthoringMap.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AuthoringMap.storyboard; path = "Maps/Authoring a map/AuthoringMap.storyboard"; sourceTree = "<group>"; };
 		3EBA254E1D30204700AB0703 /* SimpleRendererViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleRendererViewController.swift; path = "Display information/Simple renderer/SimpleRendererViewController.swift"; sourceTree = "<group>"; };
 		3EBA25501D30206400AB0703 /* SimpleRenderer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SimpleRenderer.storyboard; path = "Display information/Simple renderer/SimpleRenderer.storyboard"; sourceTree = "<group>"; };
+		3EBA25541D30264A00AB0703 /* UniqueValueRenderer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UniqueValueRenderer.storyboard; path = "Display information/Unique value renderer/UniqueValueRenderer.storyboard"; sourceTree = "<group>"; };
+		3EBA25561D30266B00AB0703 /* UniqueValueRendererViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UniqueValueRendererViewController.swift; path = "Display information/Unique value renderer/UniqueValueRendererViewController.swift"; sourceTree = "<group>"; };
 		3EC1AE691BAC8DA100E32B1D /* arcgis-runtime-samples-osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "arcgis-runtime-samples-osx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC1AE6C1BAC8DA100E32B1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EC1AE6E1BAC8DA100E32B1D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Controllers/MainViewController.swift; sourceTree = "<group>"; };
@@ -395,6 +401,7 @@
 				3E049A291CED12FC0031ADA9 /* Identify graphics */,
 				3E049A311CED132F0031ADA9 /* Show callout */,
 				3EBA254B1D301FDD00AB0703 /* Simple renderer */,
+				3EBA25531D30261800AB0703 /* Unique value renderer */,
 			);
 			name = "Display information";
 			sourceTree = "<group>";
@@ -452,6 +459,15 @@
 				3EBA25501D30206400AB0703 /* SimpleRenderer.storyboard */,
 			);
 			name = "Simple renderer";
+			sourceTree = "<group>";
+		};
+		3EBA25531D30261800AB0703 /* Unique value renderer */ = {
+			isa = PBXGroup;
+			children = (
+				3EBA25541D30264A00AB0703 /* UniqueValueRenderer.storyboard */,
+				3EBA25561D30266B00AB0703 /* UniqueValueRendererViewController.swift */,
+			);
+			name = "Unique value renderer";
 			sourceTree = "<group>";
 		};
 		3EC1AE601BAC8DA100E32B1D = {
@@ -657,6 +673,7 @@
 				3ECCFE291BCC30F500CE256D /* GriffithParkJson.txt in Resources */,
 				3E7C0E3B1CF90F0000200B6E /* highlight.pack.js in Resources */,
 				3E7C0E3C1CF90F0000200B6E /* style.css in Resources */,
+				3EBA25551D30264A00AB0703 /* UniqueValueRenderer.storyboard in Resources */,
 				3E8724811BC70CC4006386C1 /* FeatureLayerFeatureService.storyboard in Resources */,
 				3E87248F1BC710A6006386C1 /* OpenExistingMap.storyboard in Resources */,
 				3E913DC41CE660BD000375C8 /* AuthoringMap.storyboard in Resources */,
@@ -709,6 +726,7 @@
 				3E495C4B1D076C170021CD95 /* DisplaySceneViewController.swift in Sources */,
 				3ECCFE041BC86A6D00CE256D /* ChangeBasemapViewController.swift in Sources */,
 				3E049A371CED132F0031ADA9 /* CalloutViewController.swift in Sources */,
+				3EBA25571D30266B00AB0703 /* UniqueValueRendererViewController.swift in Sources */,
 				3E8724911BC710DA006386C1 /* OpenExistingMapViewController.swift in Sources */,
 				3E049A351CED132F0031ADA9 /* GraphicsWithSymbolsViewController.swift in Sources */,
 				3E049A121CEA6FE10031ADA9 /* SaveMapViewController.swift in Sources */,
