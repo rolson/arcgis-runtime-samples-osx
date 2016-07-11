@@ -439,6 +439,30 @@
  <string></string>
  </array>-->
 <!--                </dict>-->
+                <dict>
+                    <key>displayName</key>
+                    <string>Simple renderer</string>
+                    <key>storyboardName</key>
+                    <string>SimpleRenderer</string>
+                    <key>descriptionText</key>
+                    <string>This sample demonstrates how to create a simple renderer and add it to a graphics overlay</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>SimpleRendererViewController</string>
+                    </array>
+                </dict>
+                <dict>
+                    <key>displayName</key>
+                    <string>Unique value renderer</string>
+                    <key>storyboardName</key>
+                    <string>UniqueValueRenderer</string>
+                    <key>descriptionText</key>
+                    <string>This sample demonstrate how to use a unique value renderer to style different features in a feature layer with different symbols</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>UniqueValueRendererViewController</string>
+                    </array>
+                </dict>
             </array>
         </dict>
         <dict>
