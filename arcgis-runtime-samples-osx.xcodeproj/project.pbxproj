@@ -96,6 +96,12 @@
 		3EBA25551D30264A00AB0703 /* UniqueValueRenderer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBA25541D30264A00AB0703 /* UniqueValueRenderer.storyboard */; };
 		3EBA25571D30266B00AB0703 /* UniqueValueRendererViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBA25561D30266B00AB0703 /* UniqueValueRendererViewController.swift */; };
 		3EBA25581D30273100AB0703 /* UniqueValueRendererViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3EBA25561D30266B00AB0703 /* UniqueValueRendererViewController.swift */; };
+		3EBA25671D3448F800AB0703 /* SimpleMarkerSymbolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBA25661D3448F800AB0703 /* SimpleMarkerSymbolViewController.swift */; };
+		3EBA25691D34491C00AB0703 /* SimpleMarkerSymbol.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBA25681D34491C00AB0703 /* SimpleMarkerSymbol.storyboard */; };
+		3EBA256C1D344AA600AB0703 /* PictureMarkerSymbols.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBA256B1D344AA600AB0703 /* PictureMarkerSymbols.storyboard */; };
+		3EBA256E1D344ADF00AB0703 /* PictureMarkerSymbolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBA256D1D344ADF00AB0703 /* PictureMarkerSymbolsViewController.swift */; };
+		3EBA256F1D344CDA00AB0703 /* SimpleMarkerSymbolViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3EBA25661D3448F800AB0703 /* SimpleMarkerSymbolViewController.swift */; };
+		3EBA25701D344CDA00AB0703 /* PictureMarkerSymbolsViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3EBA256D1D344ADF00AB0703 /* PictureMarkerSymbolsViewController.swift */; };
 		3EC1AE6D1BAC8DA100E32B1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1AE6C1BAC8DA100E32B1D /* AppDelegate.swift */; };
 		3EC1AE6F1BAC8DA100E32B1D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1AE6E1BAC8DA100E32B1D /* MainViewController.swift */; };
 		3EC1AE711BAC8DA100E32B1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EC1AE701BAC8DA100E32B1D /* Assets.xcassets */; };
@@ -131,6 +137,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				3EBA256F1D344CDA00AB0703 /* SimpleMarkerSymbolViewController.swift in CopyFiles */,
+				3EBA25701D344CDA00AB0703 /* PictureMarkerSymbolsViewController.swift in CopyFiles */,
 				3E09CC781D39A536005D2757 /* FeatureLayerGDBViewController.swift in CopyFiles */,
 				3E09CC741D39A474005D2757 /* MapLoadedViewController.swift in CopyFiles */,
 				3E8A25BD1D36F93700D14F08 /* CreateGeometriesViewController.swift in CopyFiles */,
@@ -227,6 +235,10 @@
 		3EBA25501D30206400AB0703 /* SimpleRenderer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SimpleRenderer.storyboard; path = "Display information/Simple renderer/SimpleRenderer.storyboard"; sourceTree = "<group>"; };
 		3EBA25541D30264A00AB0703 /* UniqueValueRenderer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UniqueValueRenderer.storyboard; path = "Display information/Unique value renderer/UniqueValueRenderer.storyboard"; sourceTree = "<group>"; };
 		3EBA25561D30266B00AB0703 /* UniqueValueRendererViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UniqueValueRendererViewController.swift; path = "Display information/Unique value renderer/UniqueValueRendererViewController.swift"; sourceTree = "<group>"; };
+		3EBA25661D3448F800AB0703 /* SimpleMarkerSymbolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleMarkerSymbolViewController.swift; path = "Display information/Simple marker symbol/SimpleMarkerSymbolViewController.swift"; sourceTree = "<group>"; };
+		3EBA25681D34491C00AB0703 /* SimpleMarkerSymbol.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SimpleMarkerSymbol.storyboard; path = "Display information/Simple marker symbol/SimpleMarkerSymbol.storyboard"; sourceTree = "<group>"; };
+		3EBA256B1D344AA600AB0703 /* PictureMarkerSymbols.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PictureMarkerSymbols.storyboard; path = "Display information/Picture marker symbols/PictureMarkerSymbols.storyboard"; sourceTree = "<group>"; };
+		3EBA256D1D344ADF00AB0703 /* PictureMarkerSymbolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PictureMarkerSymbolsViewController.swift; path = "Display information/Picture marker symbols/PictureMarkerSymbolsViewController.swift"; sourceTree = "<group>"; };
 		3EC1AE691BAC8DA100E32B1D /* arcgis-runtime-samples-osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "arcgis-runtime-samples-osx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC1AE6C1BAC8DA100E32B1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EC1AE6E1BAC8DA100E32B1D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Controllers/MainViewController.swift; sourceTree = "<group>"; };
@@ -471,6 +483,8 @@
 				3E049A2E1CED132F0031ADA9 /* Add graphics with symbols */,
 				3E049A291CED12FC0031ADA9 /* Identify graphics */,
 				3E049A311CED132F0031ADA9 /* Show callout */,
+				3EBA25651D3448BB00AB0703 /* Simple marker symbol */,
+				3EBA256A1D344A6B00AB0703 /* Picture marker symbols */,
 				3EBA254B1D301FDD00AB0703 /* Simple renderer */,
 				3EBA25531D30261800AB0703 /* Unique value renderer */,
 			);
@@ -592,6 +606,24 @@
 				3EBA25561D30266B00AB0703 /* UniqueValueRendererViewController.swift */,
 			);
 			name = "Unique value renderer";
+			sourceTree = "<group>";
+		};
+		3EBA25651D3448BB00AB0703 /* Simple marker symbol */ = {
+			isa = PBXGroup;
+			children = (
+				3EBA25661D3448F800AB0703 /* SimpleMarkerSymbolViewController.swift */,
+				3EBA25681D34491C00AB0703 /* SimpleMarkerSymbol.storyboard */,
+			);
+			name = "Simple marker symbol";
+			sourceTree = "<group>";
+		};
+		3EBA256A1D344A6B00AB0703 /* Picture marker symbols */ = {
+			isa = PBXGroup;
+			children = (
+				3EBA256B1D344AA600AB0703 /* PictureMarkerSymbols.storyboard */,
+				3EBA256D1D344ADF00AB0703 /* PictureMarkerSymbolsViewController.swift */,
+			);
+			name = "Picture marker symbols";
 			sourceTree = "<group>";
 		};
 		3EC1AE601BAC8DA100E32B1D = {
@@ -808,6 +840,7 @@
 				3E049A271CED11A50031ADA9 /* MILUsingURL.storyboard in Resources */,
 				3ECCFE341BCC4FFC00CE256D /* ShowMagnifier.storyboard in Resources */,
 				3E049A471CED1F460031ADA9 /* VectorTileLayer.storyboard in Resources */,
+				3EBA256C1D344AA600AB0703 /* PictureMarkerSymbols.storyboard in Resources */,
 				3E7C0E3D1CF90F0000200B6E /* xcode.css in Resources */,
 				3E53C7381D1D9CED0054B5C8 /* SurfacePlacements.storyboard in Resources */,
 				3ECCFE2A1BCC30F500CE256D /* HighwayJson.txt in Resources */,
@@ -815,6 +848,7 @@
 				3EC1AE741BAC8DA100E32B1D /* Main.storyboard in Resources */,
 				3E8A25BC1D36F75300D14F08 /* CreateGeometries.storyboard in Resources */,
 				3ECCFE2D1BCC31E700CE256D /* MapRotation.storyboard in Resources */,
+				3EBA25691D34491C00AB0703 /* SimpleMarkerSymbol.storyboard in Resources */,
 				3E049A341CED132F0031ADA9 /* GraphicsWithSymbols.storyboard in Resources */,
 				3ECCFE0A1BC86CF300CE256D /* SetInitialMapArea.storyboard in Resources */,
 				3ECCFE151BC86E9A00CE256D /* SetInitialMapLocation.storyboard in Resources */,
@@ -861,6 +895,7 @@
 				3EBA25571D30266B00AB0703 /* UniqueValueRendererViewController.swift in Sources */,
 				3E8724911BC710DA006386C1 /* OpenExistingMapViewController.swift in Sources */,
 				3E049A351CED132F0031ADA9 /* GraphicsWithSymbolsViewController.swift in Sources */,
+				3EBA25671D3448F800AB0703 /* SimpleMarkerSymbolViewController.swift in Sources */,
 				3E53C7391D1D9CED0054B5C8 /* SurfacePlacementsViewController.swift in Sources */,
 				3E049A121CEA6FE10031ADA9 /* SaveMapViewController.swift in Sources */,
 				3ECCFE121BC86E4800CE256D /* SetInitialMapLocationViewController.swift in Sources */,
@@ -896,6 +931,7 @@
 				3E69DE4B1CFE43EA001F65F7 /* SearchEngine.swift in Sources */,
 				3E8A25C21D36F9F500D14F08 /* MapLoadedViewController.swift in Sources */,
 				3E049A281CED11A50031ADA9 /* MILUsingURLViewController.swift in Sources */,
+				3EBA256E1D344ADF00AB0703 /* PictureMarkerSymbolsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
