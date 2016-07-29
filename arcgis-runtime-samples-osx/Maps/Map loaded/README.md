@@ -10,7 +10,7 @@ This sample shows how to tell what the map's load status is. This is obtained fr
 
 ##How it works
 
-The sample sets a KVO on the `loadStatus` property on `AGSMap`. And then updates the banner label every time the status changes.
+The sample uses Key-Value Observing to register and receive observations on the `loadStatus` property of the `AGSMap`. The banner label will be updated everytime the status changes.
 
 
 
