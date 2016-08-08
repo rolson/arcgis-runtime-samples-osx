@@ -83,6 +83,9 @@
 		3E8A25C21D36F9F500D14F08 /* MapLoadedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A25C11D36F9F500D14F08 /* MapLoadedViewController.swift */; };
 		3E8A25C61D36FCB300D14F08 /* FeatureLayerGDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A25C51D36FCB300D14F08 /* FeatureLayerGDBViewController.swift */; };
 		3E8A25C81D37038000D14F08 /* FeatureLayerGDB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8A25C71D37038000D14F08 /* FeatureLayerGDB.storyboard */; };
+		3E8D55001D5513D300E628D9 /* ScenePropertiesExpressions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8D54FF1D5513D300E628D9 /* ScenePropertiesExpressions.storyboard */; };
+		3E8D55021D58D85400E628D9 /* ScenePropertiesExpressions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8D55011D58D85400E628D9 /* ScenePropertiesExpressions.swift */; };
+		3E8D55031D58DC2F00E628D9 /* ScenePropertiesExpressions.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E8D55011D58D85400E628D9 /* ScenePropertiesExpressions.swift */; };
 		3E8DB5721D2B45A000D48BC6 /* UseSceneLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8DB5711D2B45A000D48BC6 /* UseSceneLayerViewController.swift */; };
 		3E8DB5741D2B45D900D48BC6 /* UseSceneLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8DB5731D2B45D900D48BC6 /* UseSceneLayer.storyboard */; };
 		3E8DB5751D2C2CC400D48BC6 /* UseSceneLayerViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E8DB5711D2B45A000D48BC6 /* UseSceneLayerViewController.swift */; };
@@ -137,6 +140,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				3E8D55031D58DC2F00E628D9 /* ScenePropertiesExpressions.swift in CopyFiles */,
 				3EBA256F1D344CDA00AB0703 /* SimpleMarkerSymbolViewController.swift in CopyFiles */,
 				3EBA25701D344CDA00AB0703 /* PictureMarkerSymbolsViewController.swift in CopyFiles */,
 				3E09CC781D39A536005D2757 /* FeatureLayerGDBViewController.swift in CopyFiles */,
@@ -225,6 +229,8 @@
 		3E8A25C11D36F9F500D14F08 /* MapLoadedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapLoadedViewController.swift; path = "Maps/Map loaded/MapLoadedViewController.swift"; sourceTree = "<group>"; };
 		3E8A25C51D36FCB300D14F08 /* FeatureLayerGDBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeatureLayerGDBViewController.swift; path = "Features/Feature layer (geodatabase)/FeatureLayerGDBViewController.swift"; sourceTree = "<group>"; };
 		3E8A25C71D37038000D14F08 /* FeatureLayerGDB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FeatureLayerGDB.storyboard; path = "Features/Feature layer (geodatabase)/FeatureLayerGDB.storyboard"; sourceTree = "<group>"; };
+		3E8D54FF1D5513D300E628D9 /* ScenePropertiesExpressions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ScenePropertiesExpressions.storyboard; path = "3D/Scene properties expressions/ScenePropertiesExpressions.storyboard"; sourceTree = "<group>"; };
+		3E8D55011D58D85400E628D9 /* ScenePropertiesExpressions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScenePropertiesExpressions.swift; path = "3D/Scene properties expressions/ScenePropertiesExpressions.swift"; sourceTree = "<group>"; };
 		3E8DB5711D2B45A000D48BC6 /* UseSceneLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UseSceneLayerViewController.swift; path = "3D/Use scene layer/UseSceneLayerViewController.swift"; sourceTree = "<group>"; };
 		3E8DB5731D2B45D900D48BC6 /* UseSceneLayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UseSceneLayer.storyboard; path = "3D/Use scene layer/UseSceneLayer.storyboard"; sourceTree = "<group>"; };
 		3E913DB81CE64D4C000375C8 /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArcGIS.bundle; path = $HOME/Library/SDKs/ArcGIS/OSX/Frameworks/Static/ArcGIS.framework/Versions/Current/Resources/ArcGIS.bundle; sourceTree = "<absolute>"; };
@@ -376,6 +382,7 @@
 				3E53C6E61D1B55880054B5C8 /* 3D symbols */,
 				3E53C7351D1D9CED0054B5C8 /* Surface placements */,
 				3E8DB5701D2B457300D48BC6 /* Use scene layer */,
+				3E8D54FE1D55138500E628D9 /* Scene properties expressions */,
 			);
 			name = 3D;
 			sourceTree = "<group>";
@@ -568,6 +575,15 @@
 				3E8A25C71D37038000D14F08 /* FeatureLayerGDB.storyboard */,
 			);
 			name = "Feature layer (geodatabase)";
+			sourceTree = "<group>";
+		};
+		3E8D54FE1D55138500E628D9 /* Scene properties expressions */ = {
+			isa = PBXGroup;
+			children = (
+				3E8D54FF1D5513D300E628D9 /* ScenePropertiesExpressions.storyboard */,
+				3E8D55011D58D85400E628D9 /* ScenePropertiesExpressions.swift */,
+			);
+			name = "Scene properties expressions";
 			sourceTree = "<group>";
 		};
 		3E8DB5701D2B457300D48BC6 /* Use scene layer */ = {
@@ -854,6 +870,7 @@
 				3ECCFE151BC86E9A00CE256D /* SetInitialMapLocation.storyboard in Resources */,
 				3E09CC771D39A4FC005D2757 /* LA_Trails.geodatabase in Resources */,
 				3E69DE541CFF8D5F001F65F7 /* CollectionViewItem.xib in Resources */,
+				3E8D55001D5513D300E628D9 /* ScenePropertiesExpressions.storyboard in Resources */,
 				3E8A25C01D36F9D200D14F08 /* MapLoaded.storyboard in Resources */,
 				3EBA25511D30206400AB0703 /* SimpleRenderer.storyboard in Resources */,
 				3ECCFE211BC87BBB00CE256D /* DrawingStatus.storyboard in Resources */,
@@ -919,6 +936,7 @@
 				3ECCFE321BCC4FC900CE256D /* ShowMagnifierViewController.swift in Sources */,
 				3EC1AE6F1BAC8DA100E32B1D /* MainViewController.swift in Sources */,
 				3E049A2D1CED12FC0031ADA9 /* GOIdentifyViewController.swift in Sources */,
+				3E8D55021D58D85400E628D9 /* ScenePropertiesExpressions.swift in Sources */,
 				3E53C6EA1D1B55880054B5C8 /* SceneSymbolsViewController.swift in Sources */,
 				3E8724891BC70E00006386C1 /* GraphicsWithRendererViewController.swift in Sources */,
 				3E495C431D0635C10021CD95 /* ExtrudeGraphicsViewController.swift in Sources */,
