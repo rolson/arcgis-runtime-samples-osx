@@ -166,8 +166,7 @@ extension NSImage {
         let originX = (self.size.width - size.width)/2
         let originY = (self.size.height - size.height)/2
         
-        let scale = NSScreen.mainScreen()!.ags_scale()
-        let rect = CGRect(x: originX*scale, y: originY*scale, width: size.width*scale, height: size.height*scale)
+        let rect = CGRect(x: originX, y: originY, width: size.width, height: size.height)
         
         //crop image
         let croppedCGImage = CGImageCreateWithImageInRect(self.CGImageForProposedRect(nil, context: nil, hints: nil), rect)!
