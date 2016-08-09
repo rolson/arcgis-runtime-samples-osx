@@ -597,6 +597,18 @@
                         <string>UseSceneLayerViewController</string>
                     </array>
                 </dict>
+                <dict>
+                    <key>displayName</key>
+                    <string>Scene properties expressions</string>
+                    <key>storyboardName</key>
+                    <string>ScenePropertiesExpressions</string>
+                    <key>descriptionText</key>
+                    <string>This sample demonstrates how to update the orientation of graphics in graphics overlay using expressions on scene properties</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>ScenePropertiesExpressions</string>
+                    </array>
+                </dict>
             </array>
         </dict>
     </array>
