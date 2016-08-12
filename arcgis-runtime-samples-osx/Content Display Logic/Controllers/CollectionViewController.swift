@@ -20,10 +20,16 @@ class CollectionViewItem: NSCollectionViewItem {
  
     @IBOutlet var titleTextField: NSTextField!
     @IBOutlet var descriptionTextField: NSTextField!
+    @IBOutlet var thumbnailView: NSImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        
+        thumbnailView.wantsLayer = true
+        thumbnailView.layer?.borderColor = NSColor.lightGrayColor().CGColor
+        thumbnailView.layer?.borderWidth = 1
+        thumbnailView.layer?.cornerRadius = 5
+        
         
     }
     
@@ -69,10 +75,18 @@ class CollectionViewController: NSViewController, NSCollectionViewDataSource, NS
         let viewItem = collectionView.makeItemWithIdentifier("CollectionViewItem", forIndexPath: indexPath) as! CollectionViewItem
         viewItem.titleTextField.stringValue = sampleNode.displayName
         viewItem.descriptionTextField.stringValue = sampleNode.descriptionText
+        if let image = NSImage(named: sampleNode.displayName) {
+            viewItem.thumbnailView.image = image
+        }
+        else {
+            viewItem.thumbnailView.image = nil
+        }
         
         //stylize
+        viewItem.view.backgroundColor = NSColor(calibratedWhite: 0.9, alpha: 1)
         viewItem.view.wantsLayer = true
-        viewItem.view.layer?.borderColor = NSColor.blackColor().CGColor
+        viewItem.view.layer?.borderColor = NSColor.lightGrayColor().CGColor
+        viewItem.view.layer?.cornerRadius = 10
         viewItem.view.layer?.borderWidth = 1
         
         return viewItem
