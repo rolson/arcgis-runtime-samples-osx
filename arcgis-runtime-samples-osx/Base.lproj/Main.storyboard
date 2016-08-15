@@ -646,7 +646,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="arcgis_runtime_samples_osx" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="-79"/>
+            <point key="canvasLocation" x="136" y="-121"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -691,6 +691,7 @@
                                         <connections>
                                             <action selector="searchAction:" target="B8D-0N-5wS" id="JLT-7f-mJ0"/>
                                             <outlet property="delegate" destination="B8D-0N-5wS" id="zfR-iW-e8R"/>
+                                            <outlet property="menu" destination="MPl-sb-Tvx" id="Jga-Ag-Tqy"/>
                                         </connections>
                                     </searchField>
                                 </toolbarItem>
@@ -754,6 +755,19 @@
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <menu id="MPl-sb-Tvx">
+                    <items>
+                        <menuItem title="Item 1" id="CUi-FR-BXr">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Item 2" id="wz7-61-GPZ">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Item 3" id="pby-LK-Abu">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                    </items>
+                </menu>
             </objects>
             <point key="canvasLocation" x="75" y="235"/>
         </scene>
@@ -857,7 +871,7 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="26" indentationPerLevel="14" outlineTableColumn="YiJ-vY-gdF" id="FDM-Pq-fBR">
-                                                            <rect key="frame" x="0.0" y="0.0" width="201" height="22"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="201" height="450"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <size key="intercellSpacing" width="3" height="0.0"/>
                                                             <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -901,7 +915,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="W2A-dl-ZmO"/>
                                             <constraint firstAttribute="bottom" secondItem="nLa-iF-oKR" secondAttribute="bottom" id="ebQ-i2-x2H"/>
                                             <constraint firstAttribute="trailing" secondItem="nLa-iF-oKR" secondAttribute="trailing" id="vS8-1K-NFR"/>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="yNW-Ow-c1u"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="260" id="yNW-Ow-c1u"/>
                                         </constraints>
                                     </visualEffectView>
                                     <customView fixedFrame="YES" id="SXu-lo-RYW">
@@ -929,6 +943,96 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="75.5" y="833.5"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="RNI-sw-Plt">
+            <objects>
+                <windowController storyboardIdentifier="SuggestionsWindowController" id="v2o-AM-gue" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="r61-V7-xgA">
+                        <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                    </window>
+                    <connections>
+                        <segue destination="QIB-Nb-LCd" kind="relationship" relationship="window.shadowedContentViewController" id="ad5-On-Yd2"/>
+                    </connections>
+                </windowController>
+                <customObject id="OxN-Gw-mmr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customView id="mBI-gF-PDS">
+                    <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </customView>
+            </objects>
+            <point key="canvasLocation" x="936" y="125"/>
+        </scene>
+        <!--Suggestions View Controller-->
+        <scene sceneID="1Ih-dV-cBx">
+            <objects>
+                <viewController id="QIB-Nb-LCd" customClass="SuggestionsViewController" customModule="arcgis_runtime_samples_osx" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="3mX-6k-Scr">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="200"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yun-ag-mRv">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="200"/>
+                                <clipView key="contentView" id="gVN-bc-swt">
+                                    <rect key="frame" x="1" y="1" width="478" height="198"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="22" id="YWM-3v-zdE">
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="198"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                            <tableColumns>
+                                                <tableColumn width="475" minWidth="40" maxWidth="1000" id="qr5-SW-TWR">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="USI-gg-EJv">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                </tableColumn>
+                                            </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="QIB-Nb-LCd" id="FXo-xw-YLe"/>
+                                                <outlet property="delegate" destination="QIB-Nb-LCd" id="sTA-JR-azX"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="3LA-md-0Ym">
+                                    <rect key="frame" x="1" y="30" width="46" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="nil-FM-7kE">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Yun-ag-mRv" firstAttribute="top" secondItem="3mX-6k-Scr" secondAttribute="top" id="3Th-RZ-zZA"/>
+                            <constraint firstItem="Yun-ag-mRv" firstAttribute="leading" secondItem="3mX-6k-Scr" secondAttribute="leading" id="Q74-UR-i8b"/>
+                            <constraint firstAttribute="bottom" secondItem="Yun-ag-mRv" secondAttribute="bottom" id="sLm-De-Uk0"/>
+                            <constraint firstAttribute="trailing" secondItem="Yun-ag-mRv" secondAttribute="trailing" id="x0N-jC-A2z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="YWM-3v-zdE" id="q6I-7D-SM5"/>
+                    </connections>
+                </viewController>
+                <customObject id="rSs-em-Gqj" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516" y="112"/>
         </scene>
         <!--Source Code View Controller-->
         <scene sceneID="qu3-Id-KE4">
@@ -1080,84 +1184,6 @@
                 <customObject id="yP9-Y6-6j2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1330" y="1309"/>
-        </scene>
-        <!--Suggestions View Controller-->
-        <scene sceneID="7Yc-eE-dXI">
-            <objects>
-                <viewController id="CTV-42-nEq" customClass="SuggestionsViewController" customModule="arcgis_runtime_samples_osx" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="9EZ-Lu-sHE">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="V60-dR-jfH">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                                <subviews>
-                                    <scrollView autohidesScrollers="YES" horizontalLineScroll="22" horizontalPageScroll="10" verticalLineScroll="22" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2b-F3-caM">
-                                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="por-Ge-dYs">
-                                            <rect key="frame" x="1" y="1" width="448" height="298"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <subviews>
-                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="20" id="k4U-gx-42X">
-                                                    <rect key="frame" x="0.0" y="0.0" width="448" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <size key="intercellSpacing" width="3" height="2"/>
-                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
-                                                    <tableColumns>
-                                                        <tableColumn width="445" minWidth="40" maxWidth="1000" id="bWU-PC-frM">
-                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
-                                                                <font key="font" metaFont="smallSystem"/>
-                                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
-                                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
-                                                            </tableHeaderCell>
-                                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" allowsUndo="NO" alignment="left" title="Text Cell" id="307-Ta-HbK">
-                                                                <font key="font" metaFont="system"/>
-                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                            </textFieldCell>
-                                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                                        </tableColumn>
-                                                    </tableColumns>
-                                                    <connections>
-                                                        <outlet property="dataSource" destination="CTV-42-nEq" id="4mX-AS-kkf"/>
-                                                    </connections>
-                                                </tableView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
-                                        </clipView>
-                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="icG-aC-MYd">
-                                            <rect key="frame" x="1" y="283" width="448" height="16"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </scroller>
-                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="oHR-Io-CXv">
-                                            <rect key="frame" x="224" y="17" width="15" height="102"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </scroller>
-                                    </scrollView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="w2b-F3-caM" firstAttribute="leading" secondItem="V60-dR-jfH" secondAttribute="leading" id="2Hg-7s-CtQ"/>
-                                    <constraint firstItem="w2b-F3-caM" firstAttribute="top" secondItem="V60-dR-jfH" secondAttribute="top" id="2bD-he-1G9"/>
-                                    <constraint firstAttribute="bottom" secondItem="w2b-F3-caM" secondAttribute="bottom" id="ugI-Xt-axP"/>
-                                    <constraint firstAttribute="trailing" secondItem="w2b-F3-caM" secondAttribute="trailing" id="waL-tr-Wcg"/>
-                                </constraints>
-                            </visualEffectView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="V60-dR-jfH" firstAttribute="top" secondItem="9EZ-Lu-sHE" secondAttribute="top" id="OaU-Ws-tan"/>
-                            <constraint firstItem="V60-dR-jfH" firstAttribute="leading" secondItem="9EZ-Lu-sHE" secondAttribute="leading" id="WMw-bm-JIi"/>
-                            <constraint firstAttribute="trailing" secondItem="V60-dR-jfH" secondAttribute="trailing" id="kIf-TX-Ckx"/>
-                            <constraint firstAttribute="bottom" secondItem="V60-dR-jfH" secondAttribute="bottom" id="xSc-D9-7Bd"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="k4U-gx-42X" id="P3v-ZV-7f6"/>
-                    </connections>
-                </viewController>
-                <customObject id="NSa-PR-F87" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="788" y="1681"/>
         </scene>
     </scenes>
     <resources>

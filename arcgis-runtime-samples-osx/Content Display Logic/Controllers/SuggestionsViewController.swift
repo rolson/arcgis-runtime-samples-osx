@@ -16,17 +16,28 @@
 
 import Cocoa
 
-class SuggestionsViewController: NSViewController, NSTableViewDataSource {
+protocol SuggestionsVCDelegate: class {
+    
+    func suggestionsViewController(suggestionsViewController: SuggestionsViewController, didSelectSuggestion suggestion: String)
+}
+
+class SuggestionsViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
     
     @IBOutlet var tableView:NSTableView!
     
-    var suggestions: [String]!
+    weak var delegate: SuggestionsVCDelegate?
+    
+    var suggestions: [String]! {
+        didSet {
+            self.tableView?.deselectAll(nil)
+            self.tableView?.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        
-        print("Popover window:: \(self.view.window)")
+    
     }
     
     //MARK: - NSTableViewDataSource
@@ -37,5 +48,15 @@ class SuggestionsViewController: NSViewController, NSTableViewDataSource {
     
     func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
         return self.suggestions[row]
+    }
+
+    //MARK: - NSTableViewDelegate
+    
+    func tableViewSelectionDidChange(notification: NSNotification) {
+        let selectedRow = self.tableView.selectedRow
+        if selectedRow >= 0 {
+            let suggestion = self.suggestions[selectedRow]
+            self.delegate?.suggestionsViewController(self, didSelectSuggestion: suggestion)
+        }
     }
 }
