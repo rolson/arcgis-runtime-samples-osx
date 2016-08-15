@@ -296,8 +296,6 @@ class MainViewController: NSViewController, NSOutlineViewDataSource, NSOutlineVi
     
     func collectionViewController(collectionViewController: CollectionViewController, didSelectSampleNode node: Node) {
         
-        self.displaySampleForNode(node)
-        
         if let abc = self.findParentForNode(node) {
             
             if self.expandedNodeIndex != nil {
