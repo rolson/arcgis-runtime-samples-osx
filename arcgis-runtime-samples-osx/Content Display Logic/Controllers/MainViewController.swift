@@ -49,6 +49,12 @@ class MainViewController: NSViewController, NSOutlineViewDataSource, NSOutlineVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+    }
+    
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        
         self.populateTree()
     }
 
@@ -64,6 +70,9 @@ class MainViewController: NSViewController, NSOutlineViewDataSource, NSOutlineVi
         let content = NSArray(contentsOfFile: path!)
         self.nodesArray = self.populateNodesArray(content! as [AnyObject])
         self.outlineView.reloadData()
+        
+        //select first (Featured) node
+        self.outlineView.selectRowIndexes(NSIndexSet(index: 0), byExtendingSelection: false)
     }
     
     func populateNodesArray(array:[AnyObject]) -> [Node] {
@@ -188,12 +197,6 @@ class MainViewController: NSViewController, NSOutlineViewDataSource, NSOutlineVi
         return (item as! Node).displayName
     }
     
-    func outlineView(outlineView: NSOutlineView, willDisplayOutlineCell cell: AnyObject, forTableColumn tableColumn: NSTableColumn?, item: AnyObject) {
-        let cell = cell as! NSButtonCell
-        cell.image = NSImage(named: "DisclosureIconHorizontal")
-        cell.alternateImage = NSImage(named: "DisclosureIconVertical")
-    }
-    
     //MARK: - NSOutlineViewDelegate
     
     func outlineViewSelectionDidChange(notification: NSNotification) {
@@ -292,8 +295,6 @@ class MainViewController: NSViewController, NSOutlineViewDataSource, NSOutlineVi
     //MARK: - CollectionViewControllerDelegate
     
     func collectionViewController(collectionViewController: CollectionViewController, didSelectSampleNode node: Node) {
-        
-        self.displaySampleForNode(node)
         
         if let abc = self.findParentForNode(node) {
             
