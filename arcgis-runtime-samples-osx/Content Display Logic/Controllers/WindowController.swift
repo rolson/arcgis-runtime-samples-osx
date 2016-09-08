@@ -18,7 +18,6 @@ import Cocoa
 
 class WindowController: NSWindowController, NSSearchFieldDelegate, NSWindowDelegate, SuggestionsVCDelegate {
 
-    @IBOutlet var segmentedControl:NSSegmentedControl!
     @IBOutlet var searchField:NSSearchField!
     
     private var suggestionsWindowController: NSWindowController!
@@ -29,6 +28,8 @@ class WindowController: NSWindowController, NSSearchFieldDelegate, NSWindowDeleg
     
         self.window?.delegate = self
         self.window?.titleVisibility = .Hidden
+        self.window?.titlebarAppearsTransparent = true
+        self.window?.backgroundColor = NSColor(red: 113/255.0, green: 74/255.0, blue: 141/255.0, alpha: 1)
         
         self.suggestionsWindowController = self.storyboard?.instantiateControllerWithIdentifier("SuggestionsWindowController") as! NSWindowController
         self.suggestionsViewController = self.suggestionsWindowController.contentViewController as! SuggestionsViewController
@@ -63,7 +64,7 @@ class WindowController: NSWindowController, NSSearchFieldDelegate, NSWindowDeleg
     
     private func searchSamples(searchString: String) {
         //hide segment control
-        self.segmentedControl.hidden = true
+        (self.contentViewController as! MainViewController).toggleSegmentedControl(.Off)
         
         //hide suggestions window
         self.hideSuggestionsWindow()
