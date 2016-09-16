@@ -21,6 +21,7 @@
 		3E09CC741D39A474005D2757 /* MapLoadedViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E8A25C11D36F9F500D14F08 /* MapLoadedViewController.swift */; };
 		3E09CC771D39A4FC005D2757 /* LA_Trails.geodatabase in Resources */ = {isa = PBXBuildFile; fileRef = 3E09CC761D39A4FC005D2757 /* LA_Trails.geodatabase */; };
 		3E09CC781D39A536005D2757 /* FeatureLayerGDBViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E8A25C51D36FCB300D14F08 /* FeatureLayerGDBViewController.swift */; };
+		3E1C57541D7A20A900C2E0BB /* CustomSegmentedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1C57531D7A20A900C2E0BB /* CustomSegmentedCell.swift */; };
 		3E495C431D0635C10021CD95 /* ExtrudeGraphicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E495C421D0635C10021CD95 /* ExtrudeGraphicsViewController.swift */; };
 		3E495C451D0635E80021CD95 /* ExtrudeGraphics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E495C441D0635E80021CD95 /* ExtrudeGraphics.storyboard */; };
 		3E495C4B1D076C170021CD95 /* DisplaySceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E495C4A1D076C170021CD95 /* DisplaySceneViewController.swift */; };
@@ -194,6 +195,7 @@
 		3E049A411CED1EB70031ADA9 /* VectorTileLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorTileLayerViewController.swift; sourceTree = "<group>"; };
 		3E049A461CED1F460031ADA9 /* VectorTileLayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VectorTileLayer.storyboard; sourceTree = "<group>"; };
 		3E09CC761D39A4FC005D2757 /* LA_Trails.geodatabase */ = {isa = PBXFileReference; lastKnownFileType = file; path = LA_Trails.geodatabase; sourceTree = "<group>"; };
+		3E1C57531D7A20A900C2E0BB /* CustomSegmentedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegmentedCell.swift; sourceTree = "<group>"; };
 		3E495C421D0635C10021CD95 /* ExtrudeGraphicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtrudeGraphicsViewController.swift; path = "3D/Extrude graphics/ExtrudeGraphicsViewController.swift"; sourceTree = "<group>"; };
 		3E495C441D0635E80021CD95 /* ExtrudeGraphics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ExtrudeGraphics.storyboard; path = "3D/Extrude graphics/ExtrudeGraphics.storyboard"; sourceTree = "<group>"; };
 		3E495C4A1D076C170021CD95 /* DisplaySceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplaySceneViewController.swift; path = "3D/Display a scene/DisplaySceneViewController.swift"; sourceTree = "<group>"; };
@@ -764,6 +766,7 @@
 				3E049A201CEA93200031ADA9 /* BridgingHeader.h */,
 				3EC1AE721BAC8DA100E32B1D /* Main.storyboard */,
 				3E69DE521CFF8D5F001F65F7 /* CollectionViewItem.xib */,
+				3E1C57531D7A20A900C2E0BB /* CustomSegmentedCell.swift */,
 			);
 			path = "Content Display Logic";
 			sourceTree = "<group>";
@@ -919,6 +922,7 @@
 				3ECCFE0D1BC86D1100CE256D /* SetInitialMapAreaViewController.swift in Sources */,
 				3E913DBC1CE6602E000375C8 /* AuthoringMapViewController.swift in Sources */,
 				3E8A25B81D36F69400D14F08 /* CreateGeometriesViewController.swift in Sources */,
+				3E1C57541D7A20A900C2E0BB /* CustomSegmentedCell.swift in Sources */,
 				3E69DE4D1CFE48D5001F65F7 /* SuggestionsViewController.swift in Sources */,
 				3E913DC21CE6608D000375C8 /* AuthoringOptionsViewController.swift in Sources */,
 				3ECCFE241BCC2F0C00CE256D /* ChangeViewpointViewController.swift in Sources */,

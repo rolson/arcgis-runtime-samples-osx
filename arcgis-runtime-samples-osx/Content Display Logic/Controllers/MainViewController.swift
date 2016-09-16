@@ -17,6 +17,11 @@
 import Cocoa
 import ArcGIS
 
+enum ToggleState: String {
+    case On = "On"
+    case Off = "Off"
+}
+
 extension NSView {
     
     var backgroundColor: NSColor? {
@@ -38,6 +43,9 @@ class MainViewController: NSViewController, NSOutlineViewDataSource, NSOutlineVi
 
     @IBOutlet private var outlineView:NSOutlineView!
     @IBOutlet private var placeholderView:NSView!
+    @IBOutlet private var liveSampleSegmentedControl: NSSegmentedControl!
+    @IBOutlet private var heightConstraint: NSLayoutConstraint!
+    @IBOutlet private var headerView: NSView!
     
     private var nodesArray:[Node]!
     private var expandedNodeIndex:Int!
@@ -49,7 +57,8 @@ class MainViewController: NSViewController, NSOutlineViewDataSource, NSOutlineVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        //hide header view initially
+        self.heightConstraint.constant = 0
     }
     
     override func viewWillAppear() {
@@ -130,10 +139,10 @@ class MainViewController: NSViewController, NSOutlineViewDataSource, NSOutlineVi
         
         if node.storyboardName != nil {
             //reset segmented control
-            (self.view.window?.windowController as! WindowController).segmentedControl.selectedSegment = 0
+            self.liveSampleSegmentedControl.selectedSegment = 0
             
             //enable segmented view control
-            (self.view.window?.windowController as! WindowController).segmentedControl.hidden = false
+            self.toggleSegmentedControl(.On)
             
             //add the readme controller view
             self.readmeViewController = self.storyboard!.instantiateControllerWithIdentifier("ReadmeViewController") as! ReadmeViewController
@@ -164,7 +173,7 @@ class MainViewController: NSViewController, NSOutlineViewDataSource, NSOutlineVi
         }
         else {
             //disable segmented control
-            (self.view.window?.windowController as! WindowController).segmentedControl.hidden = true
+            self.toggleSegmentedControl(.Off)
             
             //show collection view
             self.showCollectionView(node.childNodes)
@@ -196,7 +205,7 @@ class MainViewController: NSViewController, NSOutlineViewDataSource, NSOutlineVi
     func outlineView(outlineView: NSOutlineView, objectValueForTableColumn tableColumn: NSTableColumn?, byItem item: AnyObject?) -> AnyObject? {
         return (item as! Node).displayName
     }
-    
+
     //MARK: - NSOutlineViewDelegate
     
     func outlineViewSelectionDidChange(notification: NSNotification) {
@@ -267,7 +276,6 @@ class MainViewController: NSViewController, NSOutlineViewDataSource, NSOutlineVi
             self.showCollectionView(nodes)
         }
         else {
-            print("No results found")
             self.showCollectionView([Node]())
         }
     }
@@ -275,6 +283,10 @@ class MainViewController: NSViewController, NSOutlineViewDataSource, NSOutlineVi
     func nodesByDisplayNames(names:[String]) -> [Node] {
         var nodes = [Node]()
         for node in self.nodesArray {
+            //ignore featured samples to avoid redundancy
+            if node.displayName == "Featured" {
+                continue
+            }
             let children = node.childNodes
             let matchingNodes = children.filter({ return names.contains($0.displayName) })
             nodes.appendContentsOf(matchingNodes)
@@ -306,6 +318,12 @@ class MainViewController: NSViewController, NSOutlineViewDataSource, NSOutlineVi
             self.outlineView.expandItem(self.nodesArray[abc.parentIndex])
             self.outlineView.selectRowIndexes(rowIndexSet, byExtendingSelection: false)
         }
+    }
+    
+    //MARK: - Show/hide liveSampleSegmentedControl
+    
+    func toggleSegmentedControl(state: ToggleState) {
+        self.heightConstraint.animator().constant = state == .On ? 40 : 0
     }
 }
 

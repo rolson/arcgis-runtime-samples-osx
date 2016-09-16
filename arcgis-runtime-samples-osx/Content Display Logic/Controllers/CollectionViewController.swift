@@ -30,7 +30,6 @@ class CollectionViewItem: NSCollectionViewItem {
         thumbnailView.layer?.borderWidth = 1
         thumbnailView.layer?.cornerRadius = 5
         
-        
     }
     
 }
@@ -43,12 +42,14 @@ protocol CollectionViewControllerDelegate: class {
 class CollectionViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate {
 
     @IBOutlet var collectionView:NSCollectionView!
+    @IBOutlet var headerLabel: NSTextField!
     
     weak var delegate:CollectionViewControllerDelegate?
     
     var sampleNodes: [Node]! {
         didSet {
             self.collectionView?.reloadData()
+            self.updateHeaderLabel()
         }
     }
     
@@ -56,6 +57,15 @@ class CollectionViewController: NSViewController, NSCollectionViewDataSource, NS
         super.viewDidLoad()
         // Do view setup here.
         
+    }
+    
+    private func updateHeaderLabel() {
+        if self.sampleNodes.count > 0 {
+            self.headerLabel.stringValue = "\(self.sampleNodes.count) sample(s)"
+        }
+        else {
+            self.headerLabel.stringValue = "No samples found"
+        }
     }
     
     //MARK: - NSCollectionViewDataSource
@@ -83,9 +93,9 @@ class CollectionViewController: NSViewController, NSCollectionViewDataSource, NS
         }
         
         //stylize
-        viewItem.view.backgroundColor = NSColor(calibratedWhite: 0.9, alpha: 1)
+        viewItem.view.backgroundColor = NSColor(white: 235/255.0, alpha: 1)
         viewItem.view.wantsLayer = true
-        viewItem.view.layer?.borderColor = NSColor.lightGrayColor().CGColor
+        viewItem.view.layer?.borderColor = NSColor(white: 68/255.0, alpha: 1).CGColor
         viewItem.view.layer?.cornerRadius = 10
         viewItem.view.layer?.borderWidth = 1
         

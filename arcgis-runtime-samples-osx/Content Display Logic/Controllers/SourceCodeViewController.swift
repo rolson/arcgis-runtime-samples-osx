@@ -17,10 +17,13 @@
 import Cocoa
 import WebKit
 
-class SourceCodeViewController: NSViewController {
+class SourceCodeViewController: NSViewController, NSSearchFieldDelegate {
 
     @IBOutlet var popUpButton:NSPopUpButton!
     @IBOutlet var webView:WebView!
+    @IBOutlet var searchField: NSSearchField!
+    @IBOutlet var noResultLabel: NSTextField!
+    
     var fileNames:[String]! {
         didSet {
             //load the source code
@@ -81,5 +84,26 @@ class SourceCodeViewController: NSViewController {
         let filename = popUpButton.titleOfSelectedItem!
         self.loadHTMLPage(filename)
     }
-
+    
+    @IBAction func search(sender: AnyObject) {
+        if self.searchField.stringValue.isEmpty {
+            return
+        }
+        
+        let success = self.webView.searchFor(self.searchField.stringValue, direction: true, caseSensitive: false, wrap: true)
+        
+        if !success {
+            //show no result label
+            self.noResultLabel.hidden = false
+        }
+    }
+    
+    //MARK: - NSSearchField delegate
+    
+    override func controlTextDidChange(notification: NSNotification) {
+        if let sender = notification.object as? NSSearchField where sender == self.searchField {
+            //hide no results label if visible
+            self.noResultLabel.hidden = true
+        }
+    }
 }
