@@ -55,7 +55,7 @@ class ChangeViewpointViewController: NSViewController {
             if let jsonString = try? String(contentsOfFile: filepath, encoding: NSUTF8StringEncoding) {
                 let data = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
                 let dictionary = (try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions())) as! [NSObject:AnyObject]
-                let geometry = AGSGeometry.fromJSON(dictionary)
+                let geometry = try? AGSGeometry.fromJSON(dictionary)
                 return geometry as? AGSGeometry
             }
         }

@@ -44,18 +44,26 @@ class DrawingStatusViewController: NSViewController {
         //assign the map to mapView
         self.mapView.map = self.map
         
-        self.mapView.drawStatusChangedHandler = { [weak self] (drawStatus:AGSDrawStatus) in
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                if drawStatus == AGSDrawStatus.InProgress {
-                    self?.activityIndicatorView.hidden = false
-                    self?.progressIndicator.startAnimation(self)
-                }
-                else {
-                    self?.activityIndicatorView.hidden = true
-                    self?.progressIndicator.stopAnimation(self)
-                }
-            })
-        }
+        self.mapView.addObserver(self, forKeyPath: "drawStatus", options: .New, context: nil)
+        
+    }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        
+        dispatch_async(dispatch_get_main_queue(), { [weak self] () -> Void in
+            guard let weakSelf = self else {
+                return
+            }
+            
+            if weakSelf.mapView.drawStatus == .InProgress {
+                weakSelf.activityIndicatorView.hidden = false
+                weakSelf.progressIndicator.startAnimation(weakSelf)
+            }
+            else {
+                weakSelf.activityIndicatorView.hidden = true
+                weakSelf.progressIndicator.stopAnimation(weakSelf)
+            }
+        })
     }
     
 }

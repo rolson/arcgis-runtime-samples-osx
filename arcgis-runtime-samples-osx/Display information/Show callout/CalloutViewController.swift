@@ -17,7 +17,7 @@
 import Cocoa
 import ArcGIS
 
-class CalloutViewController: NSViewController, AGSMapViewTouchDelegate {
+class CalloutViewController: NSViewController, AGSGeoViewTouchDelegate {
     
     @IBOutlet private weak var mapView:AGSMapView!
     private var map:AGSMap!
@@ -46,25 +46,25 @@ class CalloutViewController: NSViewController, AGSMapViewTouchDelegate {
         self.mapView.callout.showCalloutAt(mapPoint, screenOffset: CGPointZero, rotateOffsetWithMap: false, animated: false)
     }
     
-    //MARK: - AGSMapViewTouchDelegate
+    //MARK: - AGSGeoViewTouchDelegate
     
     //show callout when user does long press on map
-    func mapView(mapView: AGSMapView, didLongPressAtScreenPoint screenPoint: CGPoint, mapPoint: AGSPoint) {
+    func geoView(geoView: AGSGeoView, didLongPressAtScreenPoint screenPoint: CGPoint, mapPoint: AGSPoint) {
         self.showCalloutForPoint(mapPoint)
     }
     
     //update the callout when user moves long press
-    func mapView(mapView: AGSMapView, didMoveLongPressToScreenPoint screenPoint: CGPoint, mapPoint: AGSPoint) {
+    func geoView(geoView: AGSGeoView, didMoveLongPressToScreenPoint screenPoint: CGPoint, mapPoint: AGSPoint) {
         self.showCalloutForPoint(mapPoint)
     }
     
     //Dismiss the callout on long press end
-    func mapView(mapView: AGSMapView, didEndLongPressAtScreenPoint screenPoint: CGPoint, mapPoint: AGSPoint) {
+    func geoView(geoView: AGSGeoView, didEndLongPressAtScreenPoint screenPoint: CGPoint, mapPoint: AGSPoint) {
         self.mapView.callout.dismiss()
     }
     
     //Dismiss the callout if long press is cancelled
-    func mapViewDidCancelLongPress(mapView: AGSMapView) {
+    func geoViewDidCancelLongPress(geoView: AGSGeoView) {
         self.mapView.callout.dismiss()
     }
 }

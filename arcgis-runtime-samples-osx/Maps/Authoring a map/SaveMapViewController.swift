@@ -52,27 +52,23 @@ class SaveMapViewController: NSViewController {
         //Validations
         let title = titleTextField.stringValue
         let tags = tagsTextField.stringValue
+        let itemDescription = descriptionTextField.stringValue
         
-        if title.isEmpty || tags.isEmpty {
+        if title.isEmpty || tags.isEmpty || itemDescription.isEmpty {
             //show alert
             let alert = NSAlert()
             alert.messageText = "Error"
-            alert.informativeText = "Title and tags are required fields"
+            alert.informativeText = "Title, tags and description are required fields"
             alert.addButtonWithTitle("OK")
             alert.beginSheetModalForWindow(self.view.window!, completionHandler: nil)
             return
         }
         
-        var itemDescription: String?
         var tagsArray = tags.componentsSeparatedByString(",")
         
         tagsArray = tagsArray.map ({
             $0.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         })
-        
-        if !self.descriptionTextField.stringValue.isEmpty {
-            itemDescription = self.descriptionTextField.stringValue
-        }
         
         self.delegate?.saveMapViewController(self, didInitiateSaveWithTitle: title, tags: tagsArray, itemDescription: itemDescription)
     }

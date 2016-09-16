@@ -235,7 +235,7 @@
 		3E8D55011D58D85400E628D9 /* ScenePropertiesExpressions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScenePropertiesExpressions.swift; path = "3D/Scene properties expressions/ScenePropertiesExpressions.swift"; sourceTree = "<group>"; };
 		3E8DB5711D2B45A000D48BC6 /* UseSceneLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UseSceneLayerViewController.swift; path = "3D/Use scene layer/UseSceneLayerViewController.swift"; sourceTree = "<group>"; };
 		3E8DB5731D2B45D900D48BC6 /* UseSceneLayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UseSceneLayer.storyboard; path = "3D/Use scene layer/UseSceneLayer.storyboard"; sourceTree = "<group>"; };
-		3E913DB81CE64D4C000375C8 /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArcGIS.bundle; path = $HOME/Library/SDKs/ArcGIS/OSX/Frameworks/Static/ArcGIS.framework/Versions/Current/Resources/ArcGIS.bundle; sourceTree = "<absolute>"; };
+		3E913DB81CE64D4C000375C8 /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArcGIS.bundle; path = $HOME/Library/SDKs/ArcGIS/macOS/Frameworks/Static/ArcGIS.framework/Versions/Current/Resources/ArcGIS.bundle; sourceTree = "<absolute>"; };
 		3E913DBB1CE6602E000375C8 /* AuthoringMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthoringMapViewController.swift; path = "Maps/Authoring a map/AuthoringMapViewController.swift"; sourceTree = "<group>"; };
 		3E913DC11CE6608D000375C8 /* AuthoringOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthoringOptionsViewController.swift; path = "Maps/Authoring a map/AuthoringOptionsViewController.swift"; sourceTree = "<group>"; };
 		3E913DC31CE660BD000375C8 /* AuthoringMap.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AuthoringMap.storyboard; path = "Maps/Authoring a map/AuthoringMap.storyboard"; sourceTree = "<group>"; };
@@ -1059,7 +1059,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/SDKs/ArcGIS/OSX/Frameworks/Static",
+					"$(USER_LIBRARY_DIR)/SDKs/ArcGIS/macOS/Frameworks/Static",
 				);
 				INFOPLIST_FILE = "arcgis-runtime-samples-osx/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -1083,7 +1083,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/SDKs/ArcGIS/OSX/Frameworks/Static",
+					"$(USER_LIBRARY_DIR)/SDKs/ArcGIS/macOS/Frameworks/Static",
 				);
 				INFOPLIST_FILE = "arcgis-runtime-samples-osx/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";

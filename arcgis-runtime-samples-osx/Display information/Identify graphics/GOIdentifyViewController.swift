@@ -17,7 +17,7 @@
 import Cocoa
 import ArcGIS
 
-class GOIdentifyViewController: NSViewController, AGSMapViewTouchDelegate {
+class GOIdentifyViewController: NSViewController, AGSGeoViewTouchDelegate {
 
     @IBOutlet private weak var mapView:AGSMapView!
     private var map:AGSMap!
@@ -63,9 +63,9 @@ class GOIdentifyViewController: NSViewController, AGSMapViewTouchDelegate {
         self.mapView.graphicsOverlays.addObject(self.graphicsOverlay)
     }
     
-    //MARK: - AGSMapViewTouchDelegate
+    //MARK: - AGSGeoViewTouchDelegate
     
-    func mapView(mapView: AGSMapView, didTapAtScreenPoint screenPoint: CGPoint, mapPoint: AGSPoint) {
+    func geoView(geoView: AGSGeoView, didTapAtScreenPoint screenPoint: CGPoint, mapPoint: AGSPoint) {
         //use the following method to identify graphics in a specific graphics overlay
         //otherwise if you need to identify on all the graphics overlay present in the map view
         //use `identifyGraphicsOverlaysAtScreenCoordinate:tolerance:maximumGraphics:completion:` method provided on map view
