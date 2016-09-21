@@ -201,11 +201,18 @@ class MainViewController: NSViewController, NSOutlineViewDataSource, NSOutlineVi
             return self.nodesArray[index]
         }
     }
-    
-    func outlineView(outlineView: NSOutlineView, objectValueForTableColumn tableColumn: NSTableColumn?, byItem item: AnyObject?) -> AnyObject? {
-        return (item as! Node).displayName
-    }
 
+    func outlineView(outlineView: NSOutlineView, viewForTableColumn tableColumn: NSTableColumn?, item: AnyObject) -> NSView? {
+        let cell = outlineView.makeViewWithIdentifier("OutlineRowView", owner: self) as! NSTableCellView
+        cell.textField?.stringValue = (item as! Node).displayName
+        
+        return cell
+    }
+    
+    func outlineView(outlineView: NSOutlineView, rowViewForItem item: AnyObject) -> NSTableRowView? {
+        return OutlineRowView()
+    }
+    
     //MARK: - NSOutlineViewDelegate
     
     func outlineViewSelectionDidChange(notification: NSNotification) {

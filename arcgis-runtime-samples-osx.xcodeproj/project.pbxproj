@@ -132,6 +132,7 @@
 		3ECCFE361BCC6FD300CE256D /* ExistingMapsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECCFE351BCC6FD300CE256D /* ExistingMapsListViewController.swift */; };
 		3ECD0F701BB0CC6F007105A1 /* ContentPList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3ECD0F6F1BB0CC6F007105A1 /* ContentPList.plist */; };
 		3ECD0F731BB0CCD6007105A1 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECD0F721BB0CCD6007105A1 /* Node.swift */; };
+		3ED052AD1D90AF40009D1B7B /* OutlineRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED052AC1D90AF40009D1B7B /* OutlineRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -275,6 +276,7 @@
 		3ECCFE351BCC6FD300CE256D /* ExistingMapsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExistingMapsListViewController.swift; path = "Maps/Open an existing map/ExistingMapsListViewController.swift"; sourceTree = "<group>"; };
 		3ECD0F6F1BB0CC6F007105A1 /* ContentPList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ContentPList.plist; sourceTree = "<group>"; };
 		3ECD0F721BB0CCD6007105A1 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		3ED052AC1D90AF40009D1B7B /* OutlineRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OutlineRowView.swift; path = Views/OutlineRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -759,14 +761,13 @@
 		3ECD0F6E1BB0CC6F007105A1 /* Content Display Logic */ = {
 			isa = PBXGroup;
 			children = (
+				3ED052AE1D92DCA3009D1B7B /* Views */,
 				3E7C0E351CF90F0000200B6E /* Js */,
 				3E049A231CED0C760031ADA9 /* Controllers */,
 				3ECD0F711BB0CCD6007105A1 /* Model */,
 				3ECD0F6F1BB0CC6F007105A1 /* ContentPList.plist */,
 				3E049A201CEA93200031ADA9 /* BridgingHeader.h */,
 				3EC1AE721BAC8DA100E32B1D /* Main.storyboard */,
-				3E69DE521CFF8D5F001F65F7 /* CollectionViewItem.xib */,
-				3E1C57531D7A20A900C2E0BB /* CustomSegmentedCell.swift */,
 			);
 			path = "Content Display Logic";
 			sourceTree = "<group>";
@@ -778,6 +779,16 @@
 				3E69DE4A1CFE43EA001F65F7 /* SearchEngine.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3ED052AE1D92DCA3009D1B7B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E69DE521CFF8D5F001F65F7 /* CollectionViewItem.xib */,
+				3E1C57531D7A20A900C2E0BB /* CustomSegmentedCell.swift */,
+				3ED052AC1D90AF40009D1B7B /* OutlineRowView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -927,6 +938,7 @@
 				3E913DC21CE6608D000375C8 /* AuthoringOptionsViewController.swift in Sources */,
 				3ECCFE241BCC2F0C00CE256D /* ChangeViewpointViewController.swift in Sources */,
 				3ECCFE361BCC6FD300CE256D /* ExistingMapsListViewController.swift in Sources */,
+				3ED052AD1D90AF40009D1B7B /* OutlineRowView.swift in Sources */,
 				3E69DE4F1CFF7F48001F65F7 /* CollectionViewController.swift in Sources */,
 				3E8A25C61D36FCB300D14F08 /* FeatureLayerGDBViewController.swift in Sources */,
 				3E8724841BC70CED006386C1 /* FeatureLayerFeatureServiceViewController.swift in Sources */,
