@@ -19,7 +19,7 @@ import Cocoa
 class CustomSegmentedCell: NSSegmentedCell {
 
     @IBInspectable
-    var tintColor: NSColor = NSColor.purpleColor()
+    var tintColor: NSColor = NSColor.secondaryBlue()
     
     override func drawSegment(segment: Int, inFrame frame: NSRect, withView controlView: NSView) {
         
