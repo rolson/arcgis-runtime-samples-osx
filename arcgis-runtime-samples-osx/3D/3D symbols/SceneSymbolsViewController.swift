@@ -84,7 +84,7 @@ class SceneSymbolsViewController: NSViewController {
         var i = 0
         for symbol in symbols {
             let point = AGSPoint(x: x + 0.01*Double(i), y: y, z: z, spatialReference: AGSSpatialReference.WGS84())
-            let graphic = AGSGraphic(geometry: point, symbol: symbol)
+            let graphic = AGSGraphic(geometry: point, symbol: symbol, attributes: nil)
             graphics.append(graphic)
             i = i+1
         }

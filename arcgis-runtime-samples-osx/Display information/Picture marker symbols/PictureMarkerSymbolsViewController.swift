@@ -57,7 +57,7 @@ class PictureMarkerSymbolsViewController: NSViewController {
         let campsitePoint = AGSPoint(x: -223560, y: 6552021, spatialReference: AGSSpatialReference.webMercator())
         
         //graphic for camp site
-        let graphic = AGSGraphic(geometry: campsitePoint, symbol: campsiteSymbol)
+        let graphic = AGSGraphic(geometry: campsitePoint, symbol: campsiteSymbol, attributes: nil)
         
         //add the graphic to the overlay
         self.graphicsOverlay.graphics.addObject(graphic)
@@ -77,7 +77,7 @@ class PictureMarkerSymbolsViewController: NSViewController {
         let pinPoint = AGSPoint(x: -226773, y: 6550477, spatialReference: AGSSpatialReference.webMercator())
         
         //graphic for pin
-        let graphic = AGSGraphic(geometry: pinPoint, symbol: pinSymbol)
+        let graphic = AGSGraphic(geometry: pinPoint, symbol: pinSymbol, attributes: nil)
         
         //add the graphic to the overlay
         self.graphicsOverlay.graphics.addObject(graphic)
