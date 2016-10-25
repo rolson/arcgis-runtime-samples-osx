@@ -42,7 +42,7 @@ class AuthoringMapViewController: NSViewController, AuthoringOptionsVCDelegate, 
     //MARK: - Save map
     
     private func saveMap(title:String, tags:[String], itemDescription:String?, thumbnail:NSImage?) {
-        self.mapView.map?.saveAs(title, portal: self.portal!, tags: tags, folder: nil, itemDescription: itemDescription!, thumbnail: thumbnail, completion: { [weak self] (error) -> Void in
+        self.mapView.map?.saveAs(title, portal: self.portal!, tags: tags, folder: nil, itemDescription: itemDescription!, thumbnail: thumbnail, forceSaveToSupportedVersion: true, completion: { [weak self] (error) -> Void in
             
             if let error = error {
                 self?.showAlert("Error", informativeText: error.localizedDescription)
