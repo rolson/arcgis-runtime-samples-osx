@@ -65,4 +65,8 @@ class DrawingStatusViewController: NSViewController {
         })
     }
     
+    deinit {
+        self.mapView.removeObserver(self, forKeyPath: "drawStatus")
+    }
+    
 }
