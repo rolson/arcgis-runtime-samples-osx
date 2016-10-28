@@ -65,10 +65,10 @@ class GraphicsWithSymbolsViewController: NSViewController {
         let buoyMarker = AGSSimpleMarkerSymbol(style: AGSSimpleMarkerSymbolStyle.Circle, color: NSColor.redColor(), size: 10)
         
         //create graphics
-        let buoyGraphic1 = AGSGraphic(geometry: buoy1Loc, symbol: buoyMarker)
-        let buoyGraphic2 = AGSGraphic(geometry: buoy2Loc, symbol: buoyMarker)
-        let buoyGraphic3 = AGSGraphic(geometry: buoy3Loc, symbol: buoyMarker)
-        let buoyGraphic4 = AGSGraphic(geometry: buoy4Loc, symbol: buoyMarker)
+        let buoyGraphic1 = AGSGraphic(geometry: buoy1Loc, symbol: buoyMarker, attributes: nil)
+        let buoyGraphic2 = AGSGraphic(geometry: buoy2Loc, symbol: buoyMarker, attributes: nil)
+        let buoyGraphic3 = AGSGraphic(geometry: buoy3Loc, symbol: buoyMarker, attributes: nil)
+        let buoyGraphic4 = AGSGraphic(geometry: buoy4Loc, symbol: buoyMarker, attributes: nil)
         
         //add the graphics to the graphics overlay
         graphicsOverlay.graphics.addObjectsFromArray([buoyGraphic1, buoyGraphic2, buoyGraphic3, buoyGraphic4])
@@ -86,8 +86,8 @@ class GraphicsWithSymbolsViewController: NSViewController {
         let craigleithSymbol = AGSTextSymbol(text: "Craigleith", color: NSColor(red: 0, green: 0, blue: 230/255.0, alpha: 1), size: 10, horizontalAlignment: AGSHorizontalAlignment.Right, verticalAlignment: AGSVerticalAlignment.Top)
         
         //define a graphic from the geometry and symbol
-        let bassRockGraphic = AGSGraphic(geometry: bassLocation, symbol: bassRockSymbol)
-        let  craigleithGraphic = AGSGraphic(geometry: craigleithLocation, symbol: craigleithSymbol)
+        let bassRockGraphic = AGSGraphic(geometry: bassLocation, symbol: bassRockSymbol, attributes: nil)
+        let  craigleithGraphic = AGSGraphic(geometry: craigleithLocation, symbol: craigleithSymbol, attributes: nil)
         
         //add the text to the graphics overlay
         graphicsOverlay.graphics.addObject(bassRockGraphic)
@@ -104,7 +104,7 @@ class GraphicsWithSymbolsViewController: NSViewController {
             width: 4)
         
         //create the graphic
-        let boatTripGraphic = AGSGraphic(geometry: boatRoute, symbol: lineSymbol)
+        let boatTripGraphic = AGSGraphic(geometry: boatRoute, symbol: lineSymbol, attributes: nil)
         
         //add to the graphics overlay
         graphicsOverlay.graphics.addObject(boatTripGraphic)
@@ -121,7 +121,7 @@ class GraphicsWithSymbolsViewController: NSViewController {
             color: NSColor(red: 0, green: 80/255.0, blue: 0, alpha: 1), outline: outlineSymbol)
         
         //nesting graphic
-        let nestingGraphic = AGSGraphic(geometry: nestingGround, symbol: fillSymbol)
+        let nestingGraphic = AGSGraphic(geometry: nestingGround, symbol: fillSymbol, attributes: nil)
         
         //add to graphics overlay
         graphicsOverlay.graphics.addObject(nestingGraphic)

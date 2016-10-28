@@ -45,7 +45,6 @@ class DrawingStatusViewController: NSViewController {
         self.mapView.map = self.map
         
         self.mapView.addObserver(self, forKeyPath: "drawStatus", options: .New, context: nil)
-        
     }
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
@@ -64,6 +63,10 @@ class DrawingStatusViewController: NSViewController {
                 weakSelf.progressIndicator.stopAnimation(weakSelf)
             }
         })
+    }
+    
+    deinit {
+        self.mapView.removeObserver(self, forKeyPath: "drawStatus")
     }
     
 }

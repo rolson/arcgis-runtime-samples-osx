@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
@@ -737,13 +737,13 @@
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="A6EC4DFA-D0EC-4BD5-A0B6-D924376D86C7" label="" paletteLabel="" id="ID2-mU-TbV">
                                     <nil key="toolTip"/>
-                                    <size key="minSize" width="38" height="17"/>
+                                    <size key="minSize" width="38" height="27"/>
                                     <size key="maxSize" width="237" height="30"/>
                                     <textField key="view" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="L53-ze-dGZ">
-                                        <rect key="frame" x="0.0" y="14" width="236" height="30"/>
+                                        <rect key="frame" x="0.0" y="14" width="236" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="ArcGIS Runtime macOS samples" id="6Sh-lM-fKR">
-                                            <font key="font" metaFont="system" size="14"/>
+                                            <font key="font" size="14" name="SFUIText-Medium"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -881,10 +881,10 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="201" height="450"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="26" indentationPerLevel="14" outlineTableColumn="YiJ-vY-gdF" id="FDM-Pq-fBR">
+                                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="22" indentationPerLevel="14" outlineTableColumn="YiJ-vY-gdF" id="FDM-Pq-fBR">
                                                             <rect key="frame" x="0.0" y="0.0" width="201" height="26"/>
                                                             <autoresizingMask key="autoresizingMask"/>
-                                                            <size key="intercellSpacing" width="3" height="0.0"/>
+                                                            <size key="intercellSpacing" width="3" height="4"/>
                                                             <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="gridColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                                             <tableColumns>
@@ -895,7 +895,7 @@
                                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                     </tableHeaderCell>
                                                                     <textFieldCell key="dataCell" lineBreakMode="truncatingTail" title="Text Cell" id="XYX-Gc-j9T">
-                                                                        <font key="font" size="14" name="Avenir-Medium"/>
+                                                                        <font key="font" size="14" name="SFUIText-Medium"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
@@ -945,11 +945,6 @@
                                                                 <segment label="Source code" width="100" tag="1"/>
                                                                 <segment label="Description" width="100"/>
                                                             </segments>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                                                    <color key="value" red="0.44375556710000003" green="0.28893020749999998" blue="0.55235832929999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
                                                         </segmentedCell>
                                                         <connections>
                                                             <action selector="segmentedControlDidChangeSelection:" target="oyR-ip-Vxp" id="t2G-QL-t1h"/>
@@ -1063,7 +1058,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="22" id="YWM-3v-zdE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="478" height="98"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="478" height="24"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -1281,13 +1276,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jy8-KE-wKC">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="256"/>
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="260"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Bxf-ia-bt2">
-                                    <rect key="frame" x="1" y="1" width="448" height="254"/>
+                                    <rect key="frame" x="1" y="1" width="448" height="258"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <collectionView selectable="YES" id="8jo-eQ-jDO">
-                                            <rect key="frame" x="0.0" y="0.0" width="448" height="254"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="448" height="258"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="20" minimumLineSpacing="20" id="Aic-qs-4gQ">
                                                 <size key="itemSize" width="360" height="130"/>
@@ -1312,9 +1307,9 @@
                                 </scroller>
                             </scrollView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PZC-hm-oeX">
-                                <rect key="frame" x="18" y="266" width="414" height="24"/>
+                                <rect key="frame" x="18" y="270" width="414" height="20"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="No samples" id="lF9-1k-mLb">
-                                    <font key="font" size="14" name="Avenir-Medium"/>
+                                    <font key="font" size="14" name="SFUIText-Medium"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1329,6 +1324,11 @@
                             <constraint firstItem="jy8-KE-wKC" firstAttribute="leading" secondItem="1vB-AM-P48" secondAttribute="leading" id="gZr-hX-RXz"/>
                             <constraint firstAttribute="trailing" secondItem="PZC-hm-oeX" secondAttribute="trailing" constant="20" id="ykQ-al-Hvf"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                <color key="value" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="8jo-eQ-jDO" id="QBR-JI-WNx"/>

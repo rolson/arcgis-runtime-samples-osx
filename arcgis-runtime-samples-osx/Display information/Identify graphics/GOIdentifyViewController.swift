@@ -51,7 +51,7 @@ class GOIdentifyViewController: NSViewController, AGSGeoViewTouchDelegate {
         polygonGeometry.addPointWithX(20e5, y: -20e5)
         polygonGeometry.addPointWithX(-20e5, y: -20e5)
         let polygonSymbol = AGSSimpleFillSymbol(style: AGSSimpleFillSymbolStyle.Solid, color: NSColor.yellowColor(), outline: nil)
-        let polygonGraphic = AGSGraphic(geometry: polygonGeometry.toGeometry())
+        let polygonGraphic = AGSGraphic(geometry: polygonGeometry.toGeometry(), symbol: nil, attributes: nil)
         
         //initialize the graphics overlay
         self.graphicsOverlay = AGSGraphicsOverlay()
@@ -71,13 +71,13 @@ class GOIdentifyViewController: NSViewController, AGSGeoViewTouchDelegate {
         //use `identifyGraphicsOverlaysAtScreenCoordinate:tolerance:maximumGraphics:completion:` method provided on map view
         let tolerance:Double = 4
         
-        self.mapView.identifyGraphicsOverlay(self.graphicsOverlay, screenPoint: screenPoint, tolerance: tolerance, maximumResults: 10) { (graphics:[AGSGraphic]?, error:NSError?) -> Void in
-            if let error = error {
+        self.mapView.identifyGraphicsOverlay(self.graphicsOverlay, screenPoint: screenPoint, tolerance: tolerance, returnPopupsOnly: false) { (result: AGSIdentifyGraphicsOverlayResult) in
+            if let error = result.error {
                 print("error while identifying :: \(error.localizedDescription)")
             }
             else {
                 //if a graphics is found then show an alert
-                if graphics?.count > 0 {
+                if result.graphics.count > 0 {
                     if let _ = self.view.window {
                         let alert = NSAlert()
                         alert.informativeText = "Tapped graphic."
