@@ -42,8 +42,8 @@
 		3E69DE371CFE2826001F65F7 /* ChangeViewpointViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3ECCFE231BCC2F0C00CE256D /* ChangeViewpointViewController.swift */; };
 		3E69DE381CFE2826001F65F7 /* MapRotationViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3ECCFE2E1BCC320400CE256D /* MapRotationViewController.swift */; };
 		3E69DE391CFE2826001F65F7 /* ShowMagnifierViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3ECCFE311BCC4FC900CE256D /* ShowMagnifierViewController.swift */; };
-		3E69DE3A1CFE2826001F65F7 /* AuthoringMapViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E913DBB1CE6602E000375C8 /* AuthoringMapViewController.swift */; };
-		3E69DE3B1CFE2826001F65F7 /* AuthoringOptionsViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E913DC11CE6608D000375C8 /* AuthoringOptionsViewController.swift */; };
+		3E69DE3A1CFE2826001F65F7 /* CreateSaveMapViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E913DBB1CE6602E000375C8 /* CreateSaveMapViewController.swift */; };
+		3E69DE3B1CFE2826001F65F7 /* CreateOptionsViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E913DC11CE6608D000375C8 /* CreateOptionsViewController.swift */; };
 		3E69DE3C1CFE2826001F65F7 /* SaveMapViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E049A111CEA6FE10031ADA9 /* SaveMapViewController.swift */; };
 		3E69DE3D1CFE2826001F65F7 /* TiledLayerURLViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E87247A1BC70B41006386C1 /* TiledLayerURLViewController.swift */; };
 		3E69DE3E1CFE2826001F65F7 /* MILUsingURLViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E049A261CED11A50031ADA9 /* MILUsingURLViewController.swift */; };
@@ -91,9 +91,9 @@
 		3E8DB5741D2B45D900D48BC6 /* UseSceneLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8DB5731D2B45D900D48BC6 /* UseSceneLayer.storyboard */; };
 		3E8DB5751D2C2CC400D48BC6 /* UseSceneLayerViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E8DB5711D2B45A000D48BC6 /* UseSceneLayerViewController.swift */; };
 		3E913DB91CE64D4C000375C8 /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3E913DB81CE64D4C000375C8 /* ArcGIS.bundle */; };
-		3E913DBC1CE6602E000375C8 /* AuthoringMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E913DBB1CE6602E000375C8 /* AuthoringMapViewController.swift */; };
-		3E913DC21CE6608D000375C8 /* AuthoringOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E913DC11CE6608D000375C8 /* AuthoringOptionsViewController.swift */; };
-		3E913DC41CE660BD000375C8 /* AuthoringMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E913DC31CE660BD000375C8 /* AuthoringMap.storyboard */; };
+		3E913DBC1CE6602E000375C8 /* CreateSaveMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E913DBB1CE6602E000375C8 /* CreateSaveMapViewController.swift */; };
+		3E913DC21CE6608D000375C8 /* CreateOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E913DC11CE6608D000375C8 /* CreateOptionsViewController.swift */; };
+		3E913DC41CE660BD000375C8 /* CreateSaveMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E913DC31CE660BD000375C8 /* CreateSaveMap.storyboard */; };
 		3EBA254F1D30204700AB0703 /* SimpleRendererViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBA254E1D30204700AB0703 /* SimpleRendererViewController.swift */; };
 		3EBA25511D30206400AB0703 /* SimpleRenderer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBA25501D30206400AB0703 /* SimpleRenderer.storyboard */; };
 		3EBA25521D30256C00AB0703 /* SimpleRendererViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3EBA254E1D30204700AB0703 /* SimpleRendererViewController.swift */; };
@@ -164,8 +164,8 @@
 				3E69DE371CFE2826001F65F7 /* ChangeViewpointViewController.swift in CopyFiles */,
 				3E69DE381CFE2826001F65F7 /* MapRotationViewController.swift in CopyFiles */,
 				3E69DE391CFE2826001F65F7 /* ShowMagnifierViewController.swift in CopyFiles */,
-				3E69DE3A1CFE2826001F65F7 /* AuthoringMapViewController.swift in CopyFiles */,
-				3E69DE3B1CFE2826001F65F7 /* AuthoringOptionsViewController.swift in CopyFiles */,
+				3E69DE3A1CFE2826001F65F7 /* CreateSaveMapViewController.swift in CopyFiles */,
+				3E69DE3B1CFE2826001F65F7 /* CreateOptionsViewController.swift in CopyFiles */,
 				3E69DE3C1CFE2826001F65F7 /* SaveMapViewController.swift in CopyFiles */,
 				3E69DE3D1CFE2826001F65F7 /* TiledLayerURLViewController.swift in CopyFiles */,
 				3E69DE3E1CFE2826001F65F7 /* MILUsingURLViewController.swift in CopyFiles */,
@@ -182,7 +182,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3E049A111CEA6FE10031ADA9 /* SaveMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveMapViewController.swift; path = "Maps/Authoring a map/SaveMapViewController.swift"; sourceTree = "<group>"; };
+		3E049A111CEA6FE10031ADA9 /* SaveMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveMapViewController.swift; path = "Maps/Create and save a map/SaveMapViewController.swift"; sourceTree = "<group>"; };
 		3E049A201CEA93200031ADA9 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		3E049A251CED11A50031ADA9 /* MILUsingURL.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MILUsingURL.storyboard; sourceTree = "<group>"; };
 		3E049A261CED11A50031ADA9 /* MILUsingURLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MILUsingURLViewController.swift; sourceTree = "<group>"; };
@@ -236,9 +236,9 @@
 		3E8DB5711D2B45A000D48BC6 /* UseSceneLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UseSceneLayerViewController.swift; path = "3D/Use scene layer/UseSceneLayerViewController.swift"; sourceTree = "<group>"; };
 		3E8DB5731D2B45D900D48BC6 /* UseSceneLayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UseSceneLayer.storyboard; path = "3D/Use scene layer/UseSceneLayer.storyboard"; sourceTree = "<group>"; };
 		3E913DB81CE64D4C000375C8 /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArcGIS.bundle; path = $HOME/Library/SDKs/ArcGIS/macOS/Frameworks/Static/ArcGIS.framework/Versions/Current/Resources/ArcGIS.bundle; sourceTree = "<absolute>"; };
-		3E913DBB1CE6602E000375C8 /* AuthoringMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthoringMapViewController.swift; path = "Maps/Authoring a map/AuthoringMapViewController.swift"; sourceTree = "<group>"; };
-		3E913DC11CE6608D000375C8 /* AuthoringOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthoringOptionsViewController.swift; path = "Maps/Authoring a map/AuthoringOptionsViewController.swift"; sourceTree = "<group>"; };
-		3E913DC31CE660BD000375C8 /* AuthoringMap.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AuthoringMap.storyboard; path = "Maps/Authoring a map/AuthoringMap.storyboard"; sourceTree = "<group>"; };
+		3E913DBB1CE6602E000375C8 /* CreateSaveMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateSaveMapViewController.swift; path = "Maps/Create and save a map/CreateSaveMapViewController.swift"; sourceTree = "<group>"; };
+		3E913DC11CE6608D000375C8 /* CreateOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateOptionsViewController.swift; path = "Maps/Create and save a map/CreateOptionsViewController.swift"; sourceTree = "<group>"; };
+		3E913DC31CE660BD000375C8 /* CreateSaveMap.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateSaveMap.storyboard; path = "Maps/Create and save a map/CreateSaveMap.storyboard"; sourceTree = "<group>"; };
 		3EBA254E1D30204700AB0703 /* SimpleRendererViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleRendererViewController.swift; path = "Display information/Simple renderer/SimpleRendererViewController.swift"; sourceTree = "<group>"; };
 		3EBA25501D30206400AB0703 /* SimpleRenderer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SimpleRenderer.storyboard; path = "Display information/Simple renderer/SimpleRenderer.storyboard"; sourceTree = "<group>"; };
 		3EBA25541D30264A00AB0703 /* UniqueValueRenderer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UniqueValueRenderer.storyboard; path = "Display information/Unique value renderer/UniqueValueRenderer.storyboard"; sourceTree = "<group>"; };
@@ -452,7 +452,7 @@
 				3ECCFE221BCC2E7E00CE256D /* Change viewpoint */,
 				3ECCFE2B1BCC31B600CE256D /* Map rotation */,
 				3ECCFE301BCC4F9100CE256D /* Show magnifier */,
-				3E913DBA1CE65F34000375C8 /* Authoring a map */,
+				3E913DBA1CE65F34000375C8 /* Create and save a map */,
 			);
 			name = Maps;
 			sourceTree = "<group>";
@@ -597,15 +597,15 @@
 			name = "Use scene layer";
 			sourceTree = "<group>";
 		};
-		3E913DBA1CE65F34000375C8 /* Authoring a map */ = {
+		3E913DBA1CE65F34000375C8 /* Create and save a map */ = {
 			isa = PBXGroup;
 			children = (
-				3E913DBB1CE6602E000375C8 /* AuthoringMapViewController.swift */,
-				3E913DC11CE6608D000375C8 /* AuthoringOptionsViewController.swift */,
-				3E913DC31CE660BD000375C8 /* AuthoringMap.storyboard */,
+				3E913DBB1CE6602E000375C8 /* CreateSaveMapViewController.swift */,
+				3E913DC11CE6608D000375C8 /* CreateOptionsViewController.swift */,
+				3E913DC31CE660BD000375C8 /* CreateSaveMap.storyboard */,
 				3E049A111CEA6FE10031ADA9 /* SaveMapViewController.swift */,
 			);
-			name = "Authoring a map";
+			name = "Create and save a map";
 			sourceTree = "<group>";
 		};
 		3EBA254B1D301FDD00AB0703 /* Simple renderer */ = {
@@ -855,7 +855,7 @@
 				3E8724811BC70CC4006386C1 /* FeatureLayerFeatureService.storyboard in Resources */,
 				3E87248F1BC710A6006386C1 /* OpenExistingMap.storyboard in Resources */,
 				3E8A25C81D37038000D14F08 /* FeatureLayerGDB.storyboard in Resources */,
-				3E913DC41CE660BD000375C8 /* AuthoringMap.storyboard in Resources */,
+				3E913DC41CE660BD000375C8 /* CreateSaveMap.storyboard in Resources */,
 				3E049A271CED11A50031ADA9 /* MILUsingURL.storyboard in Resources */,
 				3ECCFE341BCC4FFC00CE256D /* ShowMagnifier.storyboard in Resources */,
 				3E049A471CED1F460031ADA9 /* VectorTileLayer.storyboard in Resources */,
@@ -920,11 +920,11 @@
 				3E049A121CEA6FE10031ADA9 /* SaveMapViewController.swift in Sources */,
 				3ECCFE121BC86E4800CE256D /* SetInitialMapLocationViewController.swift in Sources */,
 				3ECCFE0D1BC86D1100CE256D /* SetInitialMapAreaViewController.swift in Sources */,
-				3E913DBC1CE6602E000375C8 /* AuthoringMapViewController.swift in Sources */,
+				3E913DBC1CE6602E000375C8 /* CreateSaveMapViewController.swift in Sources */,
 				3E8A25B81D36F69400D14F08 /* CreateGeometriesViewController.swift in Sources */,
 				3E1C57541D7A20A900C2E0BB /* CustomSegmentedCell.swift in Sources */,
 				3E69DE4D1CFE48D5001F65F7 /* SuggestionsViewController.swift in Sources */,
-				3E913DC21CE6608D000375C8 /* AuthoringOptionsViewController.swift in Sources */,
+				3E913DC21CE6608D000375C8 /* CreateOptionsViewController.swift in Sources */,
 				3ECCFE241BCC2F0C00CE256D /* ChangeViewpointViewController.swift in Sources */,
 				3ECCFE361BCC6FD300CE256D /* ExistingMapsListViewController.swift in Sources */,
 				3E69DE4F1CFF7F48001F65F7 /* CollectionViewController.swift in Sources */,
