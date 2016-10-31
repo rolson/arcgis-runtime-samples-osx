@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F31a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="FQC-id-YCW">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="FQC-id-YCW">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
     </dependencies>
     <scenes>
         <!--Open Existing Map View Controller-->
         <scene sceneID="j9q-BV-3ED">
             <objects>
-                <viewController id="FQC-id-YCW" customClass="OpenExistingMapViewController" customModule="OSXSampleViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FQC-id-YCW" customClass="OpenExistingMapViewController" customModule="arcgis_runtime_samples_osx" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="eQe-as-79J">
                         <rect key="frame" x="0.0" y="0.0" width="583" height="464"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="BEO-la-DSt" customClass="AGSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="583" height="420"/>
+                                <rect key="frame" x="0.0" y="37" width="583" height="427"/>
                             </customView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7IC-ey-xdJ">
-                                <rect key="frame" x="255" y="419" width="73" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="iJF-MO-7fe"/>
-                                </constraints>
+                                <rect key="frame" x="255" y="1" width="73" height="32"/>
                                 <buttonCell key="cell" type="push" title="Maps" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nqT-DG-qW6">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -32,13 +29,12 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="BEO-la-DSt" firstAttribute="top" secondItem="7IC-ey-xdJ" secondAttribute="bottom" constant="6" id="7eA-eJ-Arp"/>
-                            <constraint firstAttribute="bottom" secondItem="BEO-la-DSt" secondAttribute="bottom" id="ATc-Ud-oxr"/>
-                            <constraint firstItem="7IC-ey-xdJ" firstAttribute="centerX" secondItem="eQe-as-79J" secondAttribute="centerX" id="R1p-cA-KVr"/>
-                            <constraint firstAttribute="trailing" secondItem="BEO-la-DSt" secondAttribute="trailing" id="n8m-jy-vhw"/>
-                            <constraint firstItem="BEO-la-DSt" firstAttribute="top" secondItem="eQe-as-79J" secondAttribute="top" constant="44" id="sXs-fg-S4g"/>
-                            <constraint firstItem="BEO-la-DSt" firstAttribute="leading" secondItem="eQe-as-79J" secondAttribute="leading" id="vya-3f-6UB"/>
-                            <constraint firstItem="7IC-ey-xdJ" firstAttribute="top" secondItem="eQe-as-79J" secondAttribute="top" constant="6" id="zUT-DC-aSh"/>
+                            <constraint firstItem="BEO-la-DSt" firstAttribute="top" secondItem="eQe-as-79J" secondAttribute="top" id="62U-ui-zzD"/>
+                            <constraint firstItem="BEO-la-DSt" firstAttribute="leading" secondItem="eQe-as-79J" secondAttribute="leading" id="LXs-kq-t4E"/>
+                            <constraint firstAttribute="trailing" secondItem="BEO-la-DSt" secondAttribute="trailing" id="NR1-Hv-XbS"/>
+                            <constraint firstAttribute="bottom" secondItem="7IC-ey-xdJ" secondAttribute="bottom" constant="8" id="TBy-87-GGu"/>
+                            <constraint firstItem="7IC-ey-xdJ" firstAttribute="top" secondItem="BEO-la-DSt" secondAttribute="bottom" constant="8" id="VkX-2l-xBx"/>
+                            <constraint firstItem="7IC-ey-xdJ" firstAttribute="centerX" secondItem="eQe-as-79J" secondAttribute="centerX" id="roc-hU-DHk"/>
                         </constraints>
                     </view>
                     <connections>
@@ -52,7 +48,7 @@
         <!--Choose a map-->
         <scene sceneID="eA3-LC-fj8">
             <objects>
-                <viewController title="Choose a map" id="HlT-w5-QSh" customClass="ExistingMapsListViewController" customModule="OSXSampleViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Choose a map" id="HlT-w5-QSh" customClass="ExistingMapsListViewController" customModule="arcgis_runtime_samples_osx" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="dw9-bW-KDI">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="320"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -64,7 +60,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="88" viewBased="YES" id="lDD-ID-a05">
-                                            <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="263"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
@@ -195,6 +191,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="HomeIcon" width="30" height="30"/>
+        <image name="HomeIcon" width="60" height="60"/>
     </resources>
 </document>

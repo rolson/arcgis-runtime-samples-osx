@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="I8p-wR-rpb">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="I8p-wR-rpb">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
     </dependencies>
     <scenes>
         <!--Create Save Map View Controller-->
@@ -14,13 +14,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="bTf-aA-93w" customClass="AGSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="583" height="420"/>
+                                <rect key="frame" x="0.0" y="0.0" width="583" height="427"/>
                             </customView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cbW-Ps-Ybe">
-                                <rect key="frame" x="14" y="419" width="67" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="44E-wL-KGa"/>
-                                </constraints>
+                                <rect key="frame" x="14" y="428" width="67" height="32"/>
                                 <buttonCell key="cell" type="push" title="New" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="phu-0T-6cg">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -30,10 +27,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2il-cl-cew">
-                                <rect key="frame" x="499" y="419" width="70" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="9tO-tT-f87"/>
-                                </constraints>
+                                <rect key="frame" x="499" y="428" width="70" height="32"/>
                                 <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YHh-qf-L6u">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -56,14 +50,13 @@
                             </containerView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="bTf-aA-93w" firstAttribute="top" secondItem="LDR-kc-u4U" secondAttribute="top" constant="44" id="0Zf-8a-id6"/>
                             <constraint firstAttribute="bottom" secondItem="dnu-B0-Unu" secondAttribute="bottom" id="3WL-Tl-gSY"/>
                             <constraint firstAttribute="bottom" secondItem="bTf-aA-93w" secondAttribute="bottom" id="55n-aW-oH9"/>
                             <constraint firstItem="dnu-B0-Unu" firstAttribute="top" secondItem="LDR-kc-u4U" secondAttribute="top" id="B25-gH-eNC"/>
-                            <constraint firstItem="2il-cl-cew" firstAttribute="top" secondItem="LDR-kc-u4U" secondAttribute="top" constant="6" id="KYe-oA-DFi"/>
+                            <constraint firstItem="2il-cl-cew" firstAttribute="top" secondItem="LDR-kc-u4U" secondAttribute="top" constant="8" id="KYe-oA-DFi"/>
                             <constraint firstItem="cbW-Ps-Ybe" firstAttribute="leading" secondItem="LDR-kc-u4U" secondAttribute="leading" constant="20" id="MAj-h8-sMw"/>
                             <constraint firstAttribute="bottom" secondItem="1B4-9W-MXw" secondAttribute="bottom" id="RS3-h1-vpB"/>
-                            <constraint firstItem="cbW-Ps-Ybe" firstAttribute="top" secondItem="LDR-kc-u4U" secondAttribute="top" constant="6" id="Srb-S4-cYs"/>
+                            <constraint firstItem="cbW-Ps-Ybe" firstAttribute="top" secondItem="LDR-kc-u4U" secondAttribute="top" constant="8" id="Srb-S4-cYs"/>
                             <constraint firstAttribute="trailing" secondItem="bTf-aA-93w" secondAttribute="trailing" id="TLA-A8-ejR"/>
                             <constraint firstAttribute="trailing" secondItem="1B4-9W-MXw" secondAttribute="trailing" id="Tqi-ci-KMD"/>
                             <constraint firstAttribute="trailing" secondItem="2il-cl-cew" secondAttribute="trailing" constant="20" id="fnG-ED-JJm"/>
@@ -72,7 +65,7 @@
                             <constraint firstAttribute="trailing" secondItem="dnu-B0-Unu" secondAttribute="trailing" id="hhp-qn-Jri"/>
                             <constraint firstItem="1B4-9W-MXw" firstAttribute="top" secondItem="LDR-kc-u4U" secondAttribute="top" id="hmi-94-8lC"/>
                             <constraint firstItem="1B4-9W-MXw" firstAttribute="leading" secondItem="LDR-kc-u4U" secondAttribute="leading" id="mez-M5-T2h"/>
-                            <constraint firstItem="bTf-aA-93w" firstAttribute="top" secondItem="cbW-Ps-Ybe" secondAttribute="bottom" constant="6" id="tec-HD-0jh"/>
+                            <constraint firstItem="bTf-aA-93w" firstAttribute="top" secondItem="cbW-Ps-Ybe" secondAttribute="bottom" constant="8" id="tec-HD-0jh"/>
                         </constraints>
                     </view>
                     <connections>
@@ -93,7 +86,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="482" height="347"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <visualEffectView appearanceType="vibrantDark" blendingMode="withinWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="hGi-6q-BMB">
+                            <visualEffectView appearanceType="vibrantDark" blendingMode="withinWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="hGi-6q-BMB">
                                 <rect key="frame" x="0.0" y="0.0" width="482" height="347"/>
                                 <subviews>
                                     <view translatesAutoresizingMaskIntoConstraints="NO" id="Ira-Io-0KV">
@@ -242,10 +235,10 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                <color key="value" red="1" green="1" blue="1" alpha="0.5968103105" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.60265625" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
+                                                <integer key="value" value="0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -276,7 +269,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="479" height="383"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <visualEffectView appearanceType="vibrantDark" blendingMode="withinWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="c4h-qh-xmj">
+                            <visualEffectView appearanceType="vibrantDark" blendingMode="withinWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="c4h-qh-xmj">
                                 <rect key="frame" x="0.0" y="0.0" width="479" height="383"/>
                                 <subviews>
                                     <view translatesAutoresizingMaskIntoConstraints="NO" id="E8Y-PR-mmj">

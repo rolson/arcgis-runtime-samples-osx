@@ -1,35 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B30a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="uo4-1T-Pgs">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="uo4-1T-Pgs">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
     </dependencies>
     <scenes>
         <!--Change Basemap View Controller-->
         <scene sceneID="Xj8-RJ-Shd">
             <objects>
-                <viewController id="uo4-1T-Pgs" customClass="ChangeBasemapViewController" customModule="OSXSampleViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uo4-1T-Pgs" customClass="ChangeBasemapViewController" customModule="arcgis_runtime_samples_osx" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="jGu-qM-aub">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="DQp-2v-Bdt" customClass="AGSMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="260"/>
-                                <animations/>
                             </customView>
                             <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rKs-dS-JWK">
-                                <rect key="frame" x="52" y="267" width="346" height="25"/>
+                                <rect key="frame" x="23" y="267" width="405" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="KdR-VX-Bmi"/>
                                 </constraints>
-                                <animations/>
-                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="XHj-WG-a8b">
+                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="selectOne" id="XHj-WG-a8b" customClass="CustomSegmentedCell" customModule="arcgis_runtime_samples_osx" customModuleProvider="target">
                                     <font key="font" metaFont="system"/>
                                     <segments>
-                                        <segment label="Topographic" width="91" selected="YES"/>
-                                        <segment label="Streets" width="90" tag="1"/>
-                                        <segment label="Imagery" width="90"/>
-                                        <segment label="Oceans"/>
+                                        <segment label="Topographic" width="100" selected="YES"/>
+                                        <segment label="Streets" width="100" tag="1"/>
+                                        <segment label="Imagery" width="100"/>
+                                        <segment label="Oceans" width="100"/>
                                     </segments>
                                 </segmentedCell>
                                 <connections>
@@ -45,7 +43,6 @@
                             <constraint firstAttribute="bottom" secondItem="DQp-2v-Bdt" secondAttribute="bottom" id="pMY-gC-hZV"/>
                             <constraint firstAttribute="trailing" secondItem="DQp-2v-Bdt" secondAttribute="trailing" id="zSc-rK-FPR"/>
                         </constraints>
-                        <animations/>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="DQp-2v-Bdt" id="cHH-BW-cAN"/>
