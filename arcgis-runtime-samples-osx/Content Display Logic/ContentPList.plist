@@ -445,6 +445,37 @@
         </dict>
         <dict>
             <key>displayName</key>
+            <string>Edit data</string>
+            <key>children</key>
+            <array>
+                <dict>
+                    <key>displayName</key>
+                    <string>Add features (feature service)</string>
+                    <key>storyboardName</key>
+                    <string>AddFeaturesFS</string>
+                    <key>descriptionText</key>
+                    <string>Click on a location on the map to add a new feature at that location</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>AddFeaturesViewController</string>
+                    </array>
+                </dict>
+                <dict>
+                    <key>displayName</key>
+                    <string>Delete features (feature service)</string>
+                    <key>storyboardName</key>
+                    <string>DeleteFeaturesFS</string>
+                    <key>descriptionText</key>
+                    <string>Click on a feature to select it and then click on the delete button to delete the feature</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>DeleteFeaturesViewController</string>
+                    </array>
+                </dict>
+            </array>
+        </dict>
+        <dict>
+            <key>displayName</key>
             <string>Display information</string>
             <key>children</key>
             <array>
