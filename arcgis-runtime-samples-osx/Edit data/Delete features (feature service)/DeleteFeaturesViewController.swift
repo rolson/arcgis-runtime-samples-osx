@@ -68,6 +68,7 @@ class DeleteFeaturesViewController: NSViewController, AGSGeoViewTouchDelegate, A
                 self?.showAlert("Error", informativeText: "Error while deleting feature : \(error.localizedDescription)")
             }
             else {
+                self?.selectedFeature = nil
                 self?.applyEdits()
             }
         }
