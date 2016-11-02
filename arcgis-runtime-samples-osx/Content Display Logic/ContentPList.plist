@@ -528,18 +528,18 @@
                         <string>GOIdentifyViewController</string>
                     </array>
                 </dict>
-                <!--                <dict>-->
-                <!--                    <key>displayName</key>-->
-                <!--                    <string>Sketch on the map</string>-->
-                <!--                    <key>storyboardName</key>-->
-                <!--                    <string>Sketch</string>-->
-                <!--                    <key>descriptionText</key>-->
-                <!--                    <string>You can use the SketchGraphicsOverlay for sketching on your map</string>
-                 <key>sourceFileNames</key>
-                 <array>
-                 <string></string>
-                 </array>-->
-                <!--                </dict>-->
+                <dict>
+                    <key>displayName</key>
+                    <string>Sketch on the map</string>
+                    <key>storyboardName</key>
+                    <string>SketchOnMap</string>
+                    <key>descriptionText</key>
+                    <string>You can use the sketch editor for sketching on your map</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>SketchOnMapViewController</string>
+                    </array>
+                </dict>
                 <dict>
                     <key>displayName</key>
                     <string>Show callout</string>
