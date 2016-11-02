@@ -70,6 +70,12 @@
 		3E7C0E3B1CF90F0000200B6E /* highlight.pack.js in Resources */ = {isa = PBXBuildFile; fileRef = 3E7C0E371CF90F0000200B6E /* highlight.pack.js */; };
 		3E7C0E3C1CF90F0000200B6E /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 3E7C0E381CF90F0000200B6E /* style.css */; };
 		3E7C0E3D1CF90F0000200B6E /* xcode.css in Resources */ = {isa = PBXBuildFile; fileRef = 3E7C0E391CF90F0000200B6E /* xcode.css */; };
+		3E84EE441DCA4ADE006731B5 /* EditFeaturesConnected.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E84EE411DCA4ADE006731B5 /* EditFeaturesConnected.storyboard */; };
+		3E84EE451DCA4ADE006731B5 /* EditFeaturesConnectedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E84EE421DCA4ADE006731B5 /* EditFeaturesConnectedVC.swift */; };
+		3E84EE461DCA4ADE006731B5 /* FeatureTemplatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E84EE431DCA4ADE006731B5 /* FeatureTemplatePickerVC.swift */; };
+		3E84EE471DCA5181006731B5 /* DeleteFeaturesViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E29C9EC1DC7C55200E5571F /* DeleteFeaturesViewController.swift */; };
+		3E84EE481DCA5181006731B5 /* EditFeaturesConnectedVC.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E84EE421DCA4ADE006731B5 /* EditFeaturesConnectedVC.swift */; };
+		3E84EE491DCA5181006731B5 /* FeatureTemplatePickerVC.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E84EE431DCA4ADE006731B5 /* FeatureTemplatePickerVC.swift */; };
 		3E865A451D088E9900368F32 /* DisplaySceneViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E495C4A1D076C170021CD95 /* DisplaySceneViewController.swift */; };
 		3E865A461D088E9900368F32 /* ExtrudeGraphicsViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E495C421D0635C10021CD95 /* ExtrudeGraphicsViewController.swift */; };
 		3E8724721BC6D971006386C1 /* DisplayMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8724711BC6D971006386C1 /* DisplayMapViewController.swift */; };
@@ -146,6 +152,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				3E84EE471DCA5181006731B5 /* DeleteFeaturesViewController.swift in CopyFiles */,
+				3E84EE481DCA5181006731B5 /* EditFeaturesConnectedVC.swift in CopyFiles */,
+				3E84EE491DCA5181006731B5 /* FeatureTemplatePickerVC.swift in CopyFiles */,
 				3E29C9E91DC7C44200E5571F /* AddFeaturesViewController.swift in CopyFiles */,
 				3E8D55031D58DC2F00E628D9 /* ScenePropertiesExpressions.swift in CopyFiles */,
 				3EBA256F1D344CDA00AB0703 /* SimpleMarkerSymbolViewController.swift in CopyFiles */,
@@ -225,6 +234,9 @@
 		3E7C0E371CF90F0000200B6E /* highlight.pack.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highlight.pack.js; sourceTree = "<group>"; };
 		3E7C0E381CF90F0000200B6E /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		3E7C0E391CF90F0000200B6E /* xcode.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = xcode.css; sourceTree = "<group>"; };
+		3E84EE411DCA4ADE006731B5 /* EditFeaturesConnected.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditFeaturesConnected.storyboard; sourceTree = "<group>"; };
+		3E84EE421DCA4ADE006731B5 /* EditFeaturesConnectedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditFeaturesConnectedVC.swift; sourceTree = "<group>"; };
+		3E84EE431DCA4ADE006731B5 /* FeatureTemplatePickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureTemplatePickerVC.swift; sourceTree = "<group>"; };
 		3E8724711BC6D971006386C1 /* DisplayMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayMapViewController.swift; path = "Maps/Display a map/DisplayMapViewController.swift"; sourceTree = "<group>"; };
 		3E8724731BC6D9CD006386C1 /* DisplayMap.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DisplayMap.storyboard; path = "Maps/Display a map/DisplayMap.storyboard"; sourceTree = "<group>"; };
 		3E87247A1BC70B41006386C1 /* TiledLayerURLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TiledLayerURLViewController.swift; path = "Layers/ArcGIS tiled layer (URL)/TiledLayerURLViewController.swift"; sourceTree = "<group>"; };
@@ -468,6 +480,17 @@
 			path = Js;
 			sourceTree = "<group>";
 		};
+		3E84EE401DCA4ADE006731B5 /* Edit features (connected) */ = {
+			isa = PBXGroup;
+			children = (
+				3E84EE411DCA4ADE006731B5 /* EditFeaturesConnected.storyboard */,
+				3E84EE421DCA4ADE006731B5 /* EditFeaturesConnectedVC.swift */,
+				3E84EE431DCA4ADE006731B5 /* FeatureTemplatePickerVC.swift */,
+			);
+			name = "Edit features (connected)";
+			path = "Edit data/Edit features (connected)";
+			sourceTree = "<group>";
+		};
 		3E87246F1BC6D918006386C1 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,6 +558,7 @@
 			children = (
 				3E29C9E41DC7C20800E5571F /* Add features (feature service) */,
 				3E29C9EA1DC7C55200E5571F /* Delete features (feature service) */,
+				3E84EE401DCA4ADE006731B5 /* Edit features (connected) */,
 			);
 			name = "Edit data";
 			sourceTree = "<group>";
@@ -918,6 +942,7 @@
 				3E87247F1BC70BA3006386C1 /* TiledLayerURL.storyboard in Resources */,
 				3ECCFE071BC86AAF00CE256D /* ChangeBasemap.storyboard in Resources */,
 				3E29C9E71DC7C20800E5571F /* AddFeaturesFS.storyboard in Resources */,
+				3E84EE441DCA4ADE006731B5 /* EditFeaturesConnected.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -953,6 +978,7 @@
 				3EBA25671D3448F800AB0703 /* SimpleMarkerSymbolViewController.swift in Sources */,
 				3E53C7391D1D9CED0054B5C8 /* SurfacePlacementsViewController.swift in Sources */,
 				3E049A121CEA6FE10031ADA9 /* SaveMapViewController.swift in Sources */,
+				3E84EE451DCA4ADE006731B5 /* EditFeaturesConnectedVC.swift in Sources */,
 				3ECCFE121BC86E4800CE256D /* SetInitialMapLocationViewController.swift in Sources */,
 				3ECCFE0D1BC86D1100CE256D /* SetInitialMapAreaViewController.swift in Sources */,
 				3E913DBC1CE6602E000375C8 /* CreateSaveMapViewController.swift in Sources */,
@@ -974,6 +1000,7 @@
 				3ECD0F731BB0CCD6007105A1 /* Node.swift in Sources */,
 				3E87247C1BC70B41006386C1 /* TiledLayerURLViewController.swift in Sources */,
 				3ECCFE321BCC4FC900CE256D /* ShowMagnifierViewController.swift in Sources */,
+				3E84EE461DCA4ADE006731B5 /* FeatureTemplatePickerVC.swift in Sources */,
 				3EC1AE6F1BAC8DA100E32B1D /* MainViewController.swift in Sources */,
 				3E049A2D1CED12FC0031ADA9 /* GOIdentifyViewController.swift in Sources */,
 				3E8D55021D58D85400E628D9 /* ScenePropertiesExpressions.swift in Sources */,

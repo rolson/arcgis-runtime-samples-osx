@@ -472,6 +472,19 @@
                         <string>DeleteFeaturesViewController</string>
                     </array>
                 </dict>
+                <dict>
+                    <key>displayName</key>
+                    <string>Edit features (connected)</string>
+                    <key>storyboardName</key>
+                    <string>EditFeaturesConnected</string>
+                    <key>descriptionText</key>
+                    <string>This sample shows you how to add or edit features in an online feature layer using popups. The new popups provide inline editing for fast editing experience</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>EditFeaturesConnectedVC</string>
+                        <string>FeatureTemplatePickerVC</string>
+                    </array>
+                </dict>
             </array>
         </dict>
         <dict>
