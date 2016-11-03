@@ -17,9 +17,9 @@
                                 <rect key="frame" x="0.0" y="50" width="450" height="250"/>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="LAy-e9-gXW">
-                                <rect key="frame" x="74" y="0.0" width="302" height="50"/>
+                                <rect key="frame" x="41" y="0.0" width="368" height="50"/>
                                 <subviews>
-                                    <segmentedControl verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CzM-IF-Vmv">
+                                    <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CzM-IF-Vmv">
                                         <rect key="frame" x="10" y="12" width="124" height="25"/>
                                         <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="selectOne" id="Dsf-Op-9mk">
                                             <font key="font" metaFont="system"/>
@@ -35,8 +35,8 @@
                                             <action selector="geometryValueChanged:" target="jZn-M2-QbT" id="utU-pz-83B"/>
                                         </connections>
                                     </segmentedControl>
-                                    <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yjY-qr-5ig">
-                                        <rect key="frame" x="138" y="7" width="58" height="32"/>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yjY-qr-5ig">
+                                        <rect key="frame" x="138" y="7" width="80" height="32"/>
                                         <buttonCell key="cell" type="push" bezelStyle="rounded" image="Undo" imagePosition="overlaps" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4XC-Gw-6zz">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -45,8 +45,8 @@
                                             <action selector="undo:" target="jZn-M2-QbT" id="iGe-pH-hmz"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="avg-fN-T3Y">
-                                        <rect key="frame" x="184" y="7" width="58" height="32"/>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="avg-fN-T3Y">
+                                        <rect key="frame" x="206" y="7" width="80" height="32"/>
                                         <buttonCell key="cell" type="push" bezelStyle="rounded" image="Redo" imagePosition="overlaps" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6kO-dB-LAr">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -55,8 +55,8 @@
                                             <action selector="redo:" target="jZn-M2-QbT" id="ezK-cT-fbS"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CAa-1g-RY9">
-                                        <rect key="frame" x="240" y="7" width="58" height="32"/>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CAa-1g-RY9">
+                                        <rect key="frame" x="284" y="7" width="80" height="32"/>
                                         <buttonCell key="cell" type="push" bezelStyle="rounded" image="Discard" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="h1H-x0-QSl">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -71,7 +71,6 @@
                                     <constraint firstItem="yjY-qr-5ig" firstAttribute="centerY" secondItem="LAy-e9-gXW" secondAttribute="centerY" id="H4x-pK-2Dh"/>
                                     <constraint firstItem="CzM-IF-Vmv" firstAttribute="centerY" secondItem="LAy-e9-gXW" secondAttribute="centerY" id="Ibk-zk-fbE"/>
                                     <constraint firstItem="CAa-1g-RY9" firstAttribute="centerY" secondItem="LAy-e9-gXW" secondAttribute="centerY" id="K9l-5I-dg4"/>
-                                    <constraint firstAttribute="width" constant="302" id="MCN-0h-LtJ"/>
                                     <constraint firstAttribute="height" constant="50" id="NIm-DP-0sf"/>
                                     <constraint firstItem="avg-fN-T3Y" firstAttribute="leading" secondItem="yjY-qr-5ig" secondAttribute="trailing" id="TVN-RV-wcc"/>
                                     <constraint firstAttribute="trailing" secondItem="CAa-1g-RY9" secondAttribute="trailing" constant="10" id="ZXm-2X-ZLj"/>
