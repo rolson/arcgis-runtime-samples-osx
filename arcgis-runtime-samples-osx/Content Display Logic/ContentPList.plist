@@ -405,18 +405,20 @@
                  <string></string>
                  </array>-->
                 <!--                </dict>-->
-                <!--                <dict>-->
-                <!--                    <key>displayName</key>-->
-                <!--                    <string>Feature layer query</string>-->
-                <!--                    <key>storyboardName</key>-->
-                <!--                    <string>FLQuery</string>-->
-                <!--                    <key>descriptionText</key>-->
-                <!--                    <string>You can query features in feature layer via service feature table. In this sample you can query for States in USA</string>
-                 <key>sourceFileNames</key>
-                 <array>
-                 <string></string>
-                 </array>-->
-                <!--                </dict>-->
+                
+                <dict>
+                    <key>displayName</key>
+                    <string>Feature layer query</string>
+                    <key>storyboardName</key>
+                    <string>FeatureLayerQuery</string>
+                    <key>descriptionText</key>
+                    <string>You can query features in feature layer via service feature table. In this sample you can query for States in USA</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>FeatureLayerQueryVC</string>
+                    </array>
+                </dict>
+                
                 <!--                <dict>-->
                 <!--                    <key>displayName</key>-->
                 <!--                    <string>Feature layer definition expression</string>-->
