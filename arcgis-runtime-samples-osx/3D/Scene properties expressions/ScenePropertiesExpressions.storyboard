@@ -13,8 +13,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="V91-h4-Ovh" customClass="AGSSceneView">
+                                <rect key="frame" x="0.0" y="60" width="450" height="240"/>
+                            </customView>
                             <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FPU-Ru-ckO">
-                                <rect key="frame" x="75" y="240" width="300" height="60"/>
+                                <rect key="frame" x="75" y="0.0" width="300" height="60"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="agh-SP-csO">
                                         <rect key="frame" x="8" y="8" width="64" height="17"/>
@@ -112,16 +115,13 @@
                                     <constraint firstItem="mnF-zz-1KH" firstAttribute="leading" secondItem="7jM-o9-eKM" secondAttribute="trailing" constant="8" id="zp3-Ew-ZaS"/>
                                 </constraints>
                             </customView>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="V91-h4-Ovh" customClass="AGSSceneView">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="240"/>
-                            </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="V91-h4-Ovh" secondAttribute="bottom" id="9j2-Gi-g3R"/>
-                            <constraint firstItem="V91-h4-Ovh" firstAttribute="top" secondItem="FPU-Ru-ckO" secondAttribute="bottom" id="Hch-zJ-ddx"/>
-                            <constraint firstItem="FPU-Ru-ckO" firstAttribute="top" secondItem="JUg-mi-Qo3" secondAttribute="top" id="hcg-f2-jqa"/>
+                            <constraint firstItem="FPU-Ru-ckO" firstAttribute="top" secondItem="V91-h4-Ovh" secondAttribute="bottom" id="5OT-hz-Qq9"/>
+                            <constraint firstAttribute="bottom" secondItem="FPU-Ru-ckO" secondAttribute="bottom" id="eQb-4O-XSY"/>
                             <constraint firstItem="FPU-Ru-ckO" firstAttribute="centerX" secondItem="JUg-mi-Qo3" secondAttribute="centerX" id="j2u-4c-O1m"/>
                             <constraint firstAttribute="trailing" secondItem="V91-h4-Ovh" secondAttribute="trailing" id="wVE-QA-KZX"/>
+                            <constraint firstItem="V91-h4-Ovh" firstAttribute="top" secondItem="JUg-mi-Qo3" secondAttribute="top" id="yTr-c6-nSZ"/>
                             <constraint firstItem="V91-h4-Ovh" firstAttribute="leading" secondItem="JUg-mi-Qo3" secondAttribute="leading" id="zVL-k9-YTn"/>
                         </constraints>
                     </view>

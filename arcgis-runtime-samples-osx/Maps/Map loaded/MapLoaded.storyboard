@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Map Loaded View Controller-->
@@ -14,12 +15,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="1bp-W4-cHD" customClass="AGSMapView">
-                                <rect key="frame" x="0.0" y="33" width="450" height="267"/>
+                                <rect key="frame" x="0.0" y="50" width="450" height="250"/>
                             </customView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FbR-3Z-HYk">
-                                <rect key="frame" x="205" y="8" width="41" height="17"/>
+                                <rect key="frame" x="204" y="18" width="43" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="UkX-y8-AYF">
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="systemSemibold" size="13"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -28,9 +29,9 @@
                         <constraints>
                             <constraint firstItem="1bp-W4-cHD" firstAttribute="top" secondItem="eyb-5H-N8F" secondAttribute="top" id="0YH-LE-RQy"/>
                             <constraint firstAttribute="trailing" secondItem="1bp-W4-cHD" secondAttribute="trailing" id="IY4-0Q-CBi"/>
-                            <constraint firstAttribute="bottom" secondItem="FbR-3Z-HYk" secondAttribute="bottom" constant="8" id="aXw-kf-oVW"/>
+                            <constraint firstAttribute="bottom" secondItem="FbR-3Z-HYk" secondAttribute="bottom" constant="18" id="aXw-kf-oVW"/>
                             <constraint firstItem="1bp-W4-cHD" firstAttribute="leading" secondItem="eyb-5H-N8F" secondAttribute="leading" id="bkI-td-HuT"/>
-                            <constraint firstItem="FbR-3Z-HYk" firstAttribute="top" secondItem="1bp-W4-cHD" secondAttribute="bottom" constant="8" id="lf8-Do-nhz"/>
+                            <constraint firstItem="FbR-3Z-HYk" firstAttribute="top" secondItem="1bp-W4-cHD" secondAttribute="bottom" constant="15" id="lf8-Do-nhz"/>
                             <constraint firstItem="FbR-3Z-HYk" firstAttribute="centerX" secondItem="eyb-5H-N8F" secondAttribute="centerX" id="ltQ-TN-iiT"/>
                         </constraints>
                     </view>

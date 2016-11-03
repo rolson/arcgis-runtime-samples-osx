@@ -31,7 +31,7 @@ class DrawingStatusViewController: NSViewController {
         //instantiate the map with topographic basemap
         self.map = AGSMap(basemap: AGSBasemap.topographicBasemap())
         
-//        self.progressIndicator.startAnimation(self)
+        self.progressIndicator.startAnimation(self)
         
         //initial viewpoint
         self.map.initialViewpoint = AGSViewpoint(targetExtent: AGSEnvelope(XMin: -13639984, yMin: 4537387, xMax: -13606734, yMax: 4558866, spatialReference: AGSSpatialReference.webMercator()))
@@ -56,11 +56,9 @@ class DrawingStatusViewController: NSViewController {
             
             if weakSelf.mapView.drawStatus == .InProgress {
                 weakSelf.activityIndicatorView.hidden = false
-                weakSelf.progressIndicator.startAnimation(weakSelf)
             }
             else {
                 weakSelf.activityIndicatorView.hidden = true
-                weakSelf.progressIndicator.stopAnimation(weakSelf)
             }
         })
     }

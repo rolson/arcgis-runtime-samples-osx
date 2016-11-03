@@ -14,10 +14,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="bTf-aA-93w" customClass="AGSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="583" height="427"/>
+                                <rect key="frame" x="0.0" y="50" width="583" height="414"/>
                             </customView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cbW-Ps-Ybe">
-                                <rect key="frame" x="14" y="428" width="67" height="32"/>
+                                <rect key="frame" x="14" y="8" width="67" height="32"/>
                                 <buttonCell key="cell" type="push" title="New" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="phu-0T-6cg">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2il-cl-cew">
-                                <rect key="frame" x="499" y="428" width="70" height="32"/>
+                                <rect key="frame" x="499" y="8" width="70" height="32"/>
                                 <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YHh-qf-L6u">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -51,21 +51,21 @@
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="dnu-B0-Unu" secondAttribute="bottom" id="3WL-Tl-gSY"/>
-                            <constraint firstAttribute="bottom" secondItem="bTf-aA-93w" secondAttribute="bottom" id="55n-aW-oH9"/>
+                            <constraint firstItem="bTf-aA-93w" firstAttribute="top" secondItem="LDR-kc-u4U" secondAttribute="top" id="7zT-ja-TNu"/>
                             <constraint firstItem="dnu-B0-Unu" firstAttribute="top" secondItem="LDR-kc-u4U" secondAttribute="top" id="B25-gH-eNC"/>
-                            <constraint firstItem="2il-cl-cew" firstAttribute="top" secondItem="LDR-kc-u4U" secondAttribute="top" constant="8" id="KYe-oA-DFi"/>
+                            <constraint firstItem="cbW-Ps-Ybe" firstAttribute="top" secondItem="bTf-aA-93w" secondAttribute="bottom" constant="14" id="KMH-h0-Kqa"/>
                             <constraint firstItem="cbW-Ps-Ybe" firstAttribute="leading" secondItem="LDR-kc-u4U" secondAttribute="leading" constant="20" id="MAj-h8-sMw"/>
                             <constraint firstAttribute="bottom" secondItem="1B4-9W-MXw" secondAttribute="bottom" id="RS3-h1-vpB"/>
-                            <constraint firstItem="cbW-Ps-Ybe" firstAttribute="top" secondItem="LDR-kc-u4U" secondAttribute="top" constant="8" id="Srb-S4-cYs"/>
                             <constraint firstAttribute="trailing" secondItem="bTf-aA-93w" secondAttribute="trailing" id="TLA-A8-ejR"/>
                             <constraint firstAttribute="trailing" secondItem="1B4-9W-MXw" secondAttribute="trailing" id="Tqi-ci-KMD"/>
+                            <constraint firstAttribute="bottom" secondItem="2il-cl-cew" secondAttribute="bottom" constant="15" id="WIC-L1-ZRn"/>
                             <constraint firstAttribute="trailing" secondItem="2il-cl-cew" secondAttribute="trailing" constant="20" id="fnG-ED-JJm"/>
                             <constraint firstItem="bTf-aA-93w" firstAttribute="leading" secondItem="LDR-kc-u4U" secondAttribute="leading" id="g9t-PE-Ked"/>
                             <constraint firstItem="dnu-B0-Unu" firstAttribute="leading" secondItem="LDR-kc-u4U" secondAttribute="leading" id="gBC-St-zSr"/>
+                            <constraint firstAttribute="bottom" secondItem="cbW-Ps-Ybe" secondAttribute="bottom" constant="15" id="hEX-CK-cwe"/>
                             <constraint firstAttribute="trailing" secondItem="dnu-B0-Unu" secondAttribute="trailing" id="hhp-qn-Jri"/>
                             <constraint firstItem="1B4-9W-MXw" firstAttribute="top" secondItem="LDR-kc-u4U" secondAttribute="top" id="hmi-94-8lC"/>
                             <constraint firstItem="1B4-9W-MXw" firstAttribute="leading" secondItem="LDR-kc-u4U" secondAttribute="leading" id="mez-M5-T2h"/>
-                            <constraint firstItem="bTf-aA-93w" firstAttribute="top" secondItem="cbW-Ps-Ybe" secondAttribute="bottom" constant="8" id="tec-HD-0jh"/>
                         </constraints>
                     </view>
                     <connections>

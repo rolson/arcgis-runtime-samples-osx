@@ -14,16 +14,16 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="NcX-pB-Ms0" customClass="AGSMapView">
-                                <rect key="frame" x="200" y="37" width="305" height="360"/>
+                                <rect key="frame" x="200" y="50" width="305" height="347"/>
                             </customView>
                             <customView horizontalHuggingPriority="251" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="kdf-Ac-1Mc">
-                                <rect key="frame" x="0.0" y="37" width="200" height="360"/>
+                                <rect key="frame" x="0.0" y="50" width="200" height="347"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="wkv-h0-A4P"/>
                                 </constraints>
                             </customView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tMF-nV-MIn">
-                                <rect key="frame" x="197" y="1" width="111" height="32"/>
+                                <rect key="frame" x="197" y="8" width="111" height="32"/>
                                 <buttonCell key="cell" type="push" title="Add feature" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yuo-UE-m0O">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -35,9 +35,9 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="kdf-Ac-1Mc" firstAttribute="leading" secondItem="o9t-kI-AVR" secondAttribute="leading" id="Mdh-zp-MqM"/>
-                            <constraint firstItem="tMF-nV-MIn" firstAttribute="top" secondItem="NcX-pB-Ms0" secondAttribute="bottom" constant="8" id="RUG-LP-4s1"/>
+                            <constraint firstItem="tMF-nV-MIn" firstAttribute="top" secondItem="NcX-pB-Ms0" secondAttribute="bottom" constant="14" id="RUG-LP-4s1"/>
                             <constraint firstItem="NcX-pB-Ms0" firstAttribute="leading" secondItem="kdf-Ac-1Mc" secondAttribute="trailing" id="TPa-oY-Gok"/>
-                            <constraint firstAttribute="bottom" secondItem="tMF-nV-MIn" secondAttribute="bottom" constant="8" id="cZs-mo-0fw"/>
+                            <constraint firstAttribute="bottom" secondItem="tMF-nV-MIn" secondAttribute="bottom" constant="15" id="cZs-mo-0fw"/>
                             <constraint firstItem="NcX-pB-Ms0" firstAttribute="top" secondItem="o9t-kI-AVR" secondAttribute="top" id="j0Z-T7-bdH"/>
                             <constraint firstAttribute="trailing" secondItem="NcX-pB-Ms0" secondAttribute="trailing" id="lp9-Su-ShZ"/>
                             <constraint firstItem="kdf-Ac-1Mc" firstAttribute="bottom" secondItem="NcX-pB-Ms0" secondAttribute="bottom" id="o6U-R2-vT5"/>
