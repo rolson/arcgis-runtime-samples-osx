@@ -24,7 +24,10 @@ class FeatureTemplateInfo {
 }
 
 protocol FeatureTemplatePickerVCDelegate:class {
-    func featureTemplatePickerVC(controller:FeatureTemplatePickerVC, didSelectFeatureTemplate template:AGSFeatureTemplate, forFeatureLayer featureLayer:AGSFeatureLayer)
+    
+    func featureTemplatePickerVC(featureTemplatePickerVC:FeatureTemplatePickerVC, didSelectFeatureTemplate template:AGSFeatureTemplate, forFeatureLayer featureLayer:AGSFeatureLayer)
+    
+    func featureTemplatePickerVCDidCancel(featureTemplatePickerVC:FeatureTemplatePickerVC)
 }
 
 class FeatureTemplatePickerVC: NSViewController {
@@ -75,8 +78,8 @@ class FeatureTemplatePickerVC: NSViewController {
         }
     }
     
-    @IBAction func cancelAction(sender: NSButton) {
-        self.dismissController(nil)
+    @IBAction func cancelAction(_ sender: NSButton) {
+        self.delegate?.featureTemplatePickerVCDidCancel(self)
     }
     
     //MARK: - NSTableViewDataSource

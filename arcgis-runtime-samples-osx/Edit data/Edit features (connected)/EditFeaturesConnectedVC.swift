@@ -19,13 +19,19 @@ import ArcGIS
 
 class EditFeaturesConnectedVC: NSViewController, AGSGeoViewTouchDelegate, AGSPopupsViewControllerDelegate, FeatureTemplatePickerVCDelegate {
     
-    @IBOutlet private weak var mapView:AGSMapView!
+    @IBOutlet private var mapView:AGSMapView!
     @IBOutlet private var containerView:NSView!
     @IBOutlet private var containerViewLeadingConstraint:NSLayoutConstraint!
+    @IBOutlet private var addFeatureButton:NSButton!
     
     private var map:AGSMap!
     private var featureLayer:AGSFeatureLayer!
     private var popupsVC:AGSPopupsViewController!
+    private var isAddingNewFeature = false {
+        didSet {
+            self.addFeatureButton?.enabled = !isAddingNewFeature
+        }
+    }
     
     private var lastQuery:AGSCancelable!
     
@@ -42,8 +48,10 @@ class EditFeaturesConnectedVC: NSViewController, AGSGeoViewTouchDelegate, AGSPop
         self.featureLayer = AGSFeatureLayer(featureTable: featureTable)
         self.map.operationalLayers.addObject(featureLayer)
         
-        self.hidePopupsViewController(false)
+        //feature layer selection settings
+        self.featureLayer.selectionWidth = 4
         
+        self.hidePopupsViewController(false)
     }
     
     func applyEdits() {
@@ -133,6 +141,9 @@ class EditFeaturesConnectedVC: NSViewController, AGSGeoViewTouchDelegate, AGSPop
             self.containerViewLeadingConstraint.constant = -200
         }
         
+        //clear selection
+        self.featureLayer.clearSelection()
+        
         //remove the popups view controller view from super view
         self.popupsVC?.view.removeFromSuperview()
         self.popupsVC = nil
@@ -156,6 +167,14 @@ class EditFeaturesConnectedVC: NSViewController, AGSGeoViewTouchDelegate, AGSPop
         return sketchEditor
     }
     
+    func popupsViewController(popupsViewController: AGSPopupsViewController, didChangeToCurrentPopup popup: AGSPopup) {
+        //clear previous selection
+        self.featureLayer.clearSelection()
+        
+        //highlight the selected feature
+        self.featureLayer.selectFeature(popup.geoElement as! AGSFeature)
+    }
+    
     //called when the user clicks on Delete button
     func popupsViewController(popupsViewController: AGSPopupsViewController, didDeleteForPopup popup: AGSPopup) {
         
@@ -165,6 +184,11 @@ class EditFeaturesConnectedVC: NSViewController, AGSGeoViewTouchDelegate, AGSPop
     
     //called when the user clicks on Finish button
     func popupsViewController(popupsViewController: AGSPopupsViewController, didFinishEditingForPopup popup: AGSPopup) {
+        
+        if self.isAddingNewFeature {
+            //done adding new feature
+            self.isAddingNewFeature = false
+        }
         
         //disable sketch editor
         self.disableSketchEditor()
@@ -185,6 +209,13 @@ class EditFeaturesConnectedVC: NSViewController, AGSGeoViewTouchDelegate, AGSPop
     //called when the user clicks Cancel button
     func popupsViewController(popupsViewController: AGSPopupsViewController, didCancelEditingForPopup popup: AGSPopup) {
         
+        if self.isAddingNewFeature {
+            //canceled adding a new feature
+            self.isAddingNewFeature = false
+            
+            //hide the popupsViewController
+            self.hidePopupsViewController(true)
+        }
         //disable sketch editor
         self.disableSketchEditor()
     }
@@ -207,7 +238,7 @@ class EditFeaturesConnectedVC: NSViewController, AGSGeoViewTouchDelegate, AGSPop
     
     //MARK: - FeatureTemplatePickerVCDelegate
     
-    func featureTemplatePickerVC(controller: FeatureTemplatePickerVC, didSelectFeatureTemplate template: AGSFeatureTemplate, forFeatureLayer featureLayer: AGSFeatureLayer) {
+    func featureTemplatePickerVC(featureTemplatePickerVC: FeatureTemplatePickerVC, didSelectFeatureTemplate template: AGSFeatureTemplate, forFeatureLayer featureLayer: AGSFeatureLayer) {
         
         let featureTable = self.featureLayer.featureTable as! AGSArcGISFeatureTable
         //create a new feature based on the template
@@ -230,6 +261,14 @@ class EditFeaturesConnectedVC: NSViewController, AGSGeoViewTouchDelegate, AGSPop
         self.popupsVC.startEditingCurrentPopup()
     }
     
+    func featureTemplatePickerVCDidCancel(featureTemplatePickerVC: FeatureTemplatePickerVC) {
+        //cancel adding a new feature
+        self.isAddingNewFeature = false
+        
+        //hide sheet
+        self.dismissViewController(featureTemplatePickerVC)
+    }
+    
     //MARK: - Navigation
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
@@ -237,6 +276,9 @@ class EditFeaturesConnectedVC: NSViewController, AGSGeoViewTouchDelegate, AGSPop
             let controller = segue.destinationController as! FeatureTemplatePickerVC
             controller.featureLayer = self.featureLayer
             controller.delegate = self
+            
+            //will start adding new feature
+            self.isAddingNewFeature = true
         }
     }
     

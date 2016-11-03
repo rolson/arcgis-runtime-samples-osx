@@ -46,6 +46,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addFeatureButton" destination="tMF-nV-MIn" id="m1r-5P-m1H"/>
                         <outlet property="containerView" destination="kdf-Ac-1Mc" id="oys-Ed-YGr"/>
                         <outlet property="containerViewLeadingConstraint" destination="Mdh-zp-MqM" id="LjG-2J-2ib"/>
                         <outlet property="mapView" destination="NcX-pB-Ms0" id="kMm-pG-l4e"/>
@@ -175,7 +176,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="dismissController:" target="rXF-XI-eJb" id="fOI-6D-Lqy"/>
+                                    <action selector="cancelAction:" target="rXF-XI-eJb" id="hwj-bv-UOq"/>
                                 </connections>
                             </button>
                         </subviews>
