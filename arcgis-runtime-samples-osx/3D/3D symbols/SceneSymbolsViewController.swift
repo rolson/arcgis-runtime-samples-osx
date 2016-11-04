@@ -31,7 +31,7 @@ class SceneSymbolsViewController: NSViewController {
         self.sceneView.scene = scene
         
         //set the camera
-        let camera = AGSCamera(latitude: 29, longitude: 45, altitude: 6000, heading: 0, pitch: 0, roll: 0)
+        let camera = AGSCamera(latitude: 28.97, longitude: 44.935, altitude: 2082, heading: 60, pitch: 75, roll: 0)
         self.sceneView.setViewpointCamera(camera)
         
         // add base surface for elevation data
