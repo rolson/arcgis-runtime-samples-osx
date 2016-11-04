@@ -30,8 +30,8 @@ class CreateOptionsViewController: NSViewController {
     
     private var layers = [AGSLayer]()
     
-    private var layerURLs = ["http://sampleserver5.arcgisonline.com/arcgis/rest/services/Elevation/WorldElevations/MapServer",
-                             "http://sampleserver5.arcgisonline.com/arcgis/rest/services/Census/MapServer"]
+    private var layerURLs = ["https://sampleserver5.arcgisonline.com/arcgis/rest/services/Elevation/WorldElevations/MapServer",
+                             "https://sampleserver5.arcgisonline.com/arcgis/rest/services/Census/MapServer"]
  
     weak var delegate:CreateOptionsVCDelegate?
     

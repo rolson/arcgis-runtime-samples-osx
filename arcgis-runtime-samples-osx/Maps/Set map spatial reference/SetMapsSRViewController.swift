@@ -33,7 +33,7 @@ class SetMapsSRViewController: NSViewController {
         //Adding a map image layer which can reproject itself to the map's spatial reference
         //Note: Some layer such as tiled layer cannot reproject and will fail to draw if their spatial
         //reference is not the same as the map's spatial reference
-        self.map.operationalLayers.addObject(AGSArcGISMapImageLayer(URL: NSURL(string: "http://sampleserver6.arcgisonline.com/arcgis/rest/services/SampleWorldCities/MapServer")!))
+        self.map.operationalLayers.addObject(AGSArcGISMapImageLayer(URL: NSURL(string: "https://sampleserver6.arcgisonline.com/arcgis/rest/services/SampleWorldCities/MapServer")!))
         
         //assing the map to the map view
         self.mapView.map = self.map
