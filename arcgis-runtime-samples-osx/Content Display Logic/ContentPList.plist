@@ -259,6 +259,18 @@
                         <string>SaveMapViewController</string>
                     </array>
                 </dict>
+                <dict>
+                    <key>displayName</key>
+                    <string>Identify layers</string>
+                    <key>storyboardName</key>
+                    <string>IdentifyLayers</string>
+                    <key>descriptionText</key>
+                    <string>You can click on map and get all the elements present at that location from different layers</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>IdentifyLayersViewController</string>
+                    </array>
+                </dict>
                 <!--                <dict>
                  <key>displayName</key>
                  <string>Display layer view status</string>
@@ -324,6 +336,19 @@
                     <key>sourceFileNames</key>
                     <array>
                         <string>VectorTileLayerViewController</string>
+                    </array>
+                </dict>
+                <dict>
+                    <key>displayName</key>
+                    <string>ArcGIS vector tiled layer (custom style)</string>
+                    <key>storyboardName</key>
+                    <string>VectorTileCustomStyle</string>
+                    <key>descriptionText</key>
+                    <string>You can define different styles for same vector tiled layer using custom stylesheets</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>VectorTileCustomStyleVC</string>
+                        <string>VectorStylesViewController</string>
                     </array>
                 </dict>
             </array>

@@ -73,6 +73,14 @@
 		3E69DE4D1CFE48D5001F65F7 /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E69DE4C1CFE48D5001F65F7 /* SuggestionsViewController.swift */; };
 		3E69DE4F1CFF7F48001F65F7 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E69DE4E1CFF7F48001F65F7 /* CollectionViewController.swift */; };
 		3E69DE541CFF8D5F001F65F7 /* CollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E69DE521CFF8D5F001F65F7 /* CollectionViewItem.xib */; };
+		3E78235E1DCD52D20011B304 /* IdentifyLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E78235C1DCD52D20011B304 /* IdentifyLayers.storyboard */; };
+		3E78235F1DCD52D20011B304 /* IdentifyLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E78235D1DCD52D20011B304 /* IdentifyLayersViewController.swift */; };
+		3E7823601DCD54290011B304 /* IdentifyLayersViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E78235D1DCD52D20011B304 /* IdentifyLayersViewController.swift */; };
+		3E7823651DCD54CE0011B304 /* VectorStylesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7823621DCD54CE0011B304 /* VectorStylesViewController.swift */; };
+		3E7823661DCD54CE0011B304 /* VectorTileCustomStyle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7823631DCD54CE0011B304 /* VectorTileCustomStyle.storyboard */; };
+		3E7823671DCD54CE0011B304 /* VectorTileCustomStyleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7823641DCD54CE0011B304 /* VectorTileCustomStyleVC.swift */; };
+		3E7823681DCD57170011B304 /* VectorTileCustomStyleVC.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E7823641DCD54CE0011B304 /* VectorTileCustomStyleVC.swift */; };
+		3E7823691DCD57170011B304 /* VectorStylesViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E7823621DCD54CE0011B304 /* VectorStylesViewController.swift */; };
 		3E7C0E321CF8F4FE00200B6E /* SourceCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7C0E311CF8F4FE00200B6E /* SourceCodeViewController.swift */; };
 		3E7C0E341CF8FD6000200B6E /* DisplayMapViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E8724711BC6D971006386C1 /* DisplayMapViewController.swift */; };
 		3E7C0E3A1CF90F0000200B6E /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 3E7C0E361CF90F0000200B6E /* default.css */; };
@@ -161,6 +169,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				3E7823681DCD57170011B304 /* VectorTileCustomStyleVC.swift in CopyFiles */,
+				3E7823691DCD57170011B304 /* VectorStylesViewController.swift in CopyFiles */,
+				3E7823601DCD54290011B304 /* IdentifyLayersViewController.swift in CopyFiles */,
 				3E04AB411DCBEB4B00B4E2FB /* FeatureLayerQueryVC.swift in CopyFiles */,
 				3E04AB341DCAA9D600B4E2FB /* SketchOnMapViewController.swift in CopyFiles */,
 				3E84EE471DCA5181006731B5 /* DeleteFeaturesViewController.swift in CopyFiles */,
@@ -247,6 +258,11 @@
 		3E69DE4C1CFE48D5001F65F7 /* SuggestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuggestionsViewController.swift; path = Controllers/SuggestionsViewController.swift; sourceTree = "<group>"; };
 		3E69DE4E1CFF7F48001F65F7 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewController.swift; path = Controllers/CollectionViewController.swift; sourceTree = "<group>"; };
 		3E69DE521CFF8D5F001F65F7 /* CollectionViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewItem.xib; sourceTree = "<group>"; };
+		3E78235C1DCD52D20011B304 /* IdentifyLayers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IdentifyLayers.storyboard; sourceTree = "<group>"; };
+		3E78235D1DCD52D20011B304 /* IdentifyLayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifyLayersViewController.swift; sourceTree = "<group>"; };
+		3E7823621DCD54CE0011B304 /* VectorStylesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorStylesViewController.swift; sourceTree = "<group>"; };
+		3E7823631DCD54CE0011B304 /* VectorTileCustomStyle.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VectorTileCustomStyle.storyboard; sourceTree = "<group>"; };
+		3E7823641DCD54CE0011B304 /* VectorTileCustomStyleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorTileCustomStyleVC.swift; sourceTree = "<group>"; };
 		3E7C0E311CF8F4FE00200B6E /* SourceCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SourceCodeViewController.swift; path = Controllers/SourceCodeViewController.swift; sourceTree = "<group>"; };
 		3E7C0E361CF90F0000200B6E /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = default.css; sourceTree = "<group>"; };
 		3E7C0E371CF90F0000200B6E /* highlight.pack.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highlight.pack.js; sourceTree = "<group>"; };
@@ -518,6 +534,27 @@
 			path = "arcgis-runtime-samples-osx/3D/Surface placements";
 			sourceTree = SOURCE_ROOT;
 		};
+		3E78235B1DCD52D20011B304 /* Identify layers */ = {
+			isa = PBXGroup;
+			children = (
+				3E78235C1DCD52D20011B304 /* IdentifyLayers.storyboard */,
+				3E78235D1DCD52D20011B304 /* IdentifyLayersViewController.swift */,
+			);
+			name = "Identify layers";
+			path = "Maps/Identify layers";
+			sourceTree = "<group>";
+		};
+		3E7823611DCD54CE0011B304 /* ArcGIS vector tiled layer (custom style) */ = {
+			isa = PBXGroup;
+			children = (
+				3E7823631DCD54CE0011B304 /* VectorTileCustomStyle.storyboard */,
+				3E7823641DCD54CE0011B304 /* VectorTileCustomStyleVC.swift */,
+				3E7823621DCD54CE0011B304 /* VectorStylesViewController.swift */,
+			);
+			name = "ArcGIS vector tiled layer (custom style)";
+			path = "arcgis-runtime-samples-osx/Layers/ArcGIS vector tiled layer (custom style)";
+			sourceTree = SOURCE_ROOT;
+		};
 		3E7C0E351CF90F0000200B6E /* Js */ = {
 			isa = PBXGroup;
 			children = (
@@ -555,6 +592,7 @@
 				3ECCFE2B1BCC31B600CE256D /* Map rotation */,
 				3ECCFE301BCC4F9100CE256D /* Show magnifier */,
 				3E913DBA1CE65F34000375C8 /* Create and save a map */,
+				3E78235B1DCD52D20011B304 /* Identify layers */,
 			);
 			name = Maps;
 			sourceTree = "<group>";
@@ -574,6 +612,7 @@
 				3E8724791BC70898006386C1 /* ArcGIS tiled layer (URL) */,
 				3E049A241CED11A50031ADA9 /* ArcGIS map image layer (URL) */,
 				3E049A3D1CED1EB70031ADA9 /* ArcGIS vector tiled layer (URL) */,
+				3E7823611DCD54CE0011B304 /* ArcGIS vector tiled layer (custom style) */,
 			);
 			name = Layers;
 			sourceTree = "<group>";
@@ -983,6 +1022,7 @@
 				3ECCFE0A1BC86CF300CE256D /* SetInitialMapArea.storyboard in Resources */,
 				3ECCFE151BC86E9A00CE256D /* SetInitialMapLocation.storyboard in Resources */,
 				3E09CC771D39A4FC005D2757 /* LA_Trails.geodatabase in Resources */,
+				3E7823661DCD54CE0011B304 /* VectorTileCustomStyle.storyboard in Resources */,
 				3E69DE541CFF8D5F001F65F7 /* CollectionViewItem.xib in Resources */,
 				3E8D55001D5513D300E628D9 /* ScenePropertiesExpressions.storyboard in Resources */,
 				3E8A25C01D36F9D200D14F08 /* MapLoaded.storyboard in Resources */,
@@ -999,6 +1039,7 @@
 				3ECCFE071BC86AAF00CE256D /* ChangeBasemap.storyboard in Resources */,
 				3E29C9E71DC7C20800E5571F /* AddFeaturesFS.storyboard in Resources */,
 				3E84EE441DCA4ADE006731B5 /* EditFeaturesConnected.storyboard in Resources */,
+				3E78235E1DCD52D20011B304 /* IdentifyLayers.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1033,10 +1074,13 @@
 				3E049A351CED132F0031ADA9 /* GraphicsWithSymbolsViewController.swift in Sources */,
 				3EBA25671D3448F800AB0703 /* SimpleMarkerSymbolViewController.swift in Sources */,
 				3E53C7391D1D9CED0054B5C8 /* SurfacePlacementsViewController.swift in Sources */,
+				3E7823671DCD54CE0011B304 /* VectorTileCustomStyleVC.swift in Sources */,
 				3E049A121CEA6FE10031ADA9 /* SaveMapViewController.swift in Sources */,
+				3E7823651DCD54CE0011B304 /* VectorStylesViewController.swift in Sources */,
 				3E84EE451DCA4ADE006731B5 /* EditFeaturesConnectedVC.swift in Sources */,
 				3ECCFE121BC86E4800CE256D /* SetInitialMapLocationViewController.swift in Sources */,
 				3ECCFE0D1BC86D1100CE256D /* SetInitialMapAreaViewController.swift in Sources */,
+				3E78235F1DCD52D20011B304 /* IdentifyLayersViewController.swift in Sources */,
 				3E913DBC1CE6602E000375C8 /* CreateSaveMapViewController.swift in Sources */,
 				3E8A25B81D36F69400D14F08 /* CreateGeometriesViewController.swift in Sources */,
 				3E1C57541D7A20A900C2E0BB /* CustomSegmentedCell.swift in Sources */,
