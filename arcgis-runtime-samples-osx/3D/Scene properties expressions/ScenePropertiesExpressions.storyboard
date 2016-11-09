@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G26a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="17h-z8-jg8">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="17h-z8-jg8">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
     </dependencies>
     <scenes>
         <!--Scene Properties Expressions-->
@@ -13,8 +13,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="FPU-Ru-ckO">
-                                <rect key="frame" x="75" y="240" width="300" height="60"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="V91-h4-Ovh" customClass="AGSSceneView">
+                                <rect key="frame" x="0.0" y="60" width="450" height="240"/>
+                            </customView>
+                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FPU-Ru-ckO">
+                                <rect key="frame" x="75" y="0.0" width="300" height="60"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="agh-SP-csO">
                                         <rect key="frame" x="8" y="8" width="64" height="17"/>
@@ -27,15 +30,24 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="paU-4v-23f">
+                                    <slider wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="paU-4v-23f">
                                         <rect key="frame" x="76" y="32" width="178" height="20"/>
+                                        <contentFilters>
+                                            <ciFilter name="CIColorMonochrome">
+                                                <configuration>
+                                                    <ciColor key="inputColor" red="0.0" green="0.47450980390000003" blue="0.75686274509999996" alpha="1"/>
+                                                    <null key="inputImage"/>
+                                                    <real key="inputIntensity" value="1"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </contentFilters>
                                         <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="359" tickMarkPosition="above" sliderType="linear" id="wB4-iX-6s6"/>
                                         <connections>
                                             <action selector="headingSliderValueChanged:" target="17h-z8-jg8" id="5Wg-f2-h2q"/>
                                         </connections>
                                     </slider>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Fkr-fb-hYM">
-                                        <rect key="frame" x="258" y="33" width="34" height="17"/>
+                                        <rect key="frame" x="258" y="34" width="34" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="7AR-Yp-0eI"/>
                                         </constraints>
@@ -56,8 +68,17 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7jM-o9-eKM">
+                                    <slider wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7jM-o9-eKM">
                                         <rect key="frame" x="76" y="6" width="178" height="20"/>
+                                        <contentFilters>
+                                            <ciFilter name="CIColorMonochrome">
+                                                <configuration>
+                                                    <ciColor key="inputColor" red="0.0" green="0.47450980390000003" blue="0.75686274509999996" alpha="1"/>
+                                                    <null key="inputImage"/>
+                                                    <real key="inputIntensity" value="1"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </contentFilters>
                                         <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="-90" maxValue="90" tickMarkPosition="above" sliderType="linear" id="dNx-Tb-gmb"/>
                                         <connections>
                                             <action selector="pitchSliderValueChanged:" target="17h-z8-jg8" id="rnt-KL-MzR"/>
@@ -94,16 +115,13 @@
                                     <constraint firstItem="mnF-zz-1KH" firstAttribute="leading" secondItem="7jM-o9-eKM" secondAttribute="trailing" constant="8" id="zp3-Ew-ZaS"/>
                                 </constraints>
                             </customView>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="V91-h4-Ovh" customClass="AGSSceneView">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="240"/>
-                            </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="V91-h4-Ovh" secondAttribute="bottom" id="9j2-Gi-g3R"/>
-                            <constraint firstItem="V91-h4-Ovh" firstAttribute="top" secondItem="FPU-Ru-ckO" secondAttribute="bottom" id="Hch-zJ-ddx"/>
-                            <constraint firstItem="FPU-Ru-ckO" firstAttribute="top" secondItem="JUg-mi-Qo3" secondAttribute="top" id="hcg-f2-jqa"/>
+                            <constraint firstItem="FPU-Ru-ckO" firstAttribute="top" secondItem="V91-h4-Ovh" secondAttribute="bottom" id="5OT-hz-Qq9"/>
+                            <constraint firstAttribute="bottom" secondItem="FPU-Ru-ckO" secondAttribute="bottom" id="eQb-4O-XSY"/>
                             <constraint firstItem="FPU-Ru-ckO" firstAttribute="centerX" secondItem="JUg-mi-Qo3" secondAttribute="centerX" id="j2u-4c-O1m"/>
                             <constraint firstAttribute="trailing" secondItem="V91-h4-Ovh" secondAttribute="trailing" id="wVE-QA-KZX"/>
+                            <constraint firstItem="V91-h4-Ovh" firstAttribute="top" secondItem="JUg-mi-Qo3" secondAttribute="top" id="yTr-c6-nSZ"/>
                             <constraint firstItem="V91-h4-Ovh" firstAttribute="leading" secondItem="JUg-mi-Qo3" secondAttribute="leading" id="zVL-k9-YTn"/>
                         </constraints>
                     </view>

@@ -17,11 +17,11 @@
 import Cocoa
 import ArcGIS
 
-protocol AuthoringOptionsVCDelegate:class {
-    func authoringOptionsViewController(authoringOptionsViewController:AuthoringOptionsViewController, didSelectBasemap basemap:AGSBasemap, layers:[AGSLayer]?)
+protocol CreateOptionsVCDelegate:class {
+    func createOptionsViewController(createOptionsViewController:CreateOptionsViewController, didSelectBasemap basemap:AGSBasemap, layers:[AGSLayer]?)
 }
 
-class AuthoringOptionsViewController: NSViewController {
+class CreateOptionsViewController: NSViewController {
     
     private var selectedLayersIndexes = [Int]()
     private var selectedBasemapIndex:Int!
@@ -30,10 +30,10 @@ class AuthoringOptionsViewController: NSViewController {
     
     private var layers = [AGSLayer]()
     
-    private var layerURLs = ["http://sampleserver5.arcgisonline.com/arcgis/rest/services/Elevation/WorldElevations/MapServer",
-                             "http://sampleserver5.arcgisonline.com/arcgis/rest/services/Census/MapServer"]
+    private var layerURLs = ["https://sampleserver5.arcgisonline.com/arcgis/rest/services/Elevation/WorldElevations/MapServer",
+                             "https://sampleserver5.arcgisonline.com/arcgis/rest/services/Census/MapServer"]
  
-    weak var delegate:AuthoringOptionsVCDelegate?
+    weak var delegate:CreateOptionsVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +78,7 @@ class AuthoringOptionsViewController: NSViewController {
             layers.append(layer)
         }
         
-        self.delegate?.authoringOptionsViewController(self, didSelectBasemap: basemap, layers: layers.count > 0 ? layers : nil)
+        self.delegate?.createOptionsViewController(self, didSelectBasemap: basemap, layers: layers.count > 0 ? layers : nil)
     }
     
     //MARK: - Helper methods

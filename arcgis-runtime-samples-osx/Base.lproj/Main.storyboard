@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="11201"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -709,15 +709,6 @@
                                         </buttonCell>
                                     </button>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="C22F4A2E-14B9-4671-AF57-3B56C1979F4C" label="" paletteLabel="" tag="-1" id="VRC-X4-t4o">
-                                    <nil key="toolTip"/>
-                                    <size key="minSize" width="16" height="16"/>
-                                    <size key="maxSize" width="16" height="16"/>
-                                    <progressIndicator key="view" hidden="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="Bup-oQ-BhE">
-                                        <rect key="frame" x="0.0" y="14" width="16" height="16"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    </progressIndicator>
-                                </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="9F1D127F-8175-4972-BF95-77DE728FBF22" label="" paletteLabel="" id="TmG-JT-s96" userLabel="Toolbar Item - Segmented Control">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="300" height="24"/>
@@ -749,18 +740,38 @@
                                         </textFieldCell>
                                     </textField>
                                 </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="C41AB23B-0874-4E64-8AB4-0F6B53F7643D" label="" paletteLabel="" tag="-1" id="LRI-le-gnh">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="16" height="16"/>
+                                    <size key="maxSize" width="32" height="32"/>
+                                    <progressIndicator key="view" hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="hep-iw-wZ1">
+                                        <rect key="frame" x="0.0" y="14" width="16" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <contentFilters>
+                                            <ciFilter name="CIColorControls">
+                                                <configuration>
+                                                    <real key="inputBrightness" value="1"/>
+                                                    <real key="inputContrast" value="1"/>
+                                                    <null key="inputImage"/>
+                                                    <real key="inputSaturation" value="1"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </contentFilters>
+                                    </progressIndicator>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="exl-JJ-tks"/>
-                                <toolbarItem reference="VRC-X4-t4o"/>
                                 <toolbarItem reference="exl-JJ-tks"/>
                                 <toolbarItem reference="ID2-mU-TbV"/>
                                 <toolbarItem reference="exl-JJ-tks"/>
+                                <toolbarItem reference="LRI-le-gnh"/>
                                 <toolbarItem reference="EM3-m8-0vq"/>
                             </defaultToolbarItems>
                         </toolbar>
                     </window>
                     <connections>
+                        <outlet property="progressIndicator" destination="hep-iw-wZ1" id="Wt8-IP-QV4"/>
                         <outlet property="searchField" destination="Mv2-JN-rDN" id="b4z-so-mW6"/>
                         <segue destination="oyR-ip-Vxp" kind="relationship" relationship="window.shadowedContentViewController" id="R5C-zr-fOz"/>
                     </connections>
@@ -792,6 +803,7 @@
                         <subviews>
                             <splitView fixedFrame="YES" arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6p6-SV-bnS">
                                 <rect key="frame" x="0.0" y="0.0" width="741" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="27" horizontalPageScroll="10" verticalLineScroll="27" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" id="GfI-Gr-nsb">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="2"/>
@@ -871,7 +883,7 @@
                             <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qQY-yB-BGf">
                                 <rect key="frame" x="0.0" y="0.0" width="700" height="450"/>
                                 <subviews>
-                                    <visualEffectView appearanceType="vibrantLight" blendingMode="behindWindow" state="followsWindowActiveState" id="leJ-gj-k5P">
+                                    <visualEffectView appearanceType="vibrantLight" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" id="leJ-gj-k5P">
                                         <rect key="frame" x="0.0" y="0.0" width="201" height="450"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
@@ -882,7 +894,7 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="22" indentationPerLevel="14" outlineTableColumn="YiJ-vY-gdF" id="FDM-Pq-fBR">
-                                                            <rect key="frame" x="0.0" y="0.0" width="201" height="26"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="201" height="450"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <size key="intercellSpacing" width="3" height="4"/>
                                                             <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -957,7 +969,7 @@
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                                <color key="value" red="0.44375556710000003" green="0.28893020749999998" blue="0.55235832929999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="value" red="0.0" green="0.47450980392156861" blue="0.75686274509803919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </customView>
@@ -1048,7 +1060,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="100"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <visualEffectView appearanceType="vibrantLight" blendingMode="behindWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="i1e-VN-4eM">
+                            <visualEffectView appearanceType="vibrantLight" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="i1e-VN-4eM">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="100"/>
                                 <subviews>
                                     <scrollView autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yun-ag-mRv">
@@ -1058,7 +1070,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="22" id="YWM-3v-zdE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="478" height="24"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="478" height="98"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -1084,7 +1096,6 @@
                                                     </connections>
                                                 </tableView>
                                             </subviews>
-                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </clipView>
                                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="3LA-md-0Ym">
                                             <rect key="frame" x="1" y="183" width="478" height="16"/>
@@ -1341,6 +1352,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="HomeIcon" width="30" height="30"/>
+        <image name="HomeIcon" width="60" height="60"/>
     </resources>
 </document>

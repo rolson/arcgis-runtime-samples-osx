@@ -24,6 +24,7 @@ enum ToggleState: String {
 
 extension NSView {
     
+    @IBInspectable
     var backgroundColor: NSColor? {
         get {
             if let colorRef = self.layer?.backgroundColor {
