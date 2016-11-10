@@ -16,9 +16,26 @@
 
 import Cocoa
 
+extension NSWindow {
+    //MARK: - Progres indicator
+    
+    func showProgressIndicator() {
+        if let controller = self.windowController as? WindowController {
+            controller.showProgressIndicator()
+        }
+    }
+    
+    func hideProgressIndicator() {
+        if let controller = self.windowController as? WindowController {
+            controller.hideProgressIndicator()
+        }
+    }
+}
+
 class WindowController: NSWindowController, NSSearchFieldDelegate, NSWindowDelegate, SuggestionsVCDelegate {
 
     @IBOutlet var searchField:NSSearchField!
+    @IBOutlet private var progressIndicator:NSProgressIndicator!
     
     private var suggestionsWindowController: NSWindowController!
     private var suggestionsViewController: SuggestionsViewController!
@@ -34,8 +51,21 @@ class WindowController: NSWindowController, NSSearchFieldDelegate, NSWindowDeleg
         self.suggestionsWindowController = self.storyboard?.instantiateControllerWithIdentifier("SuggestionsWindowController") as! NSWindowController
         self.suggestionsViewController = self.suggestionsWindowController.contentViewController as! SuggestionsViewController
         self.suggestionsViewController.delegate = self
+        
+        //progress indicator
+        self.progressIndicator.startAnimation(nil)
+    }
+    
+    //MARK: - Progres indicator
+    
+    func showProgressIndicator() {
+        self.progressIndicator.hidden = false
     }
 
+    func hideProgressIndicator() {
+        self.progressIndicator.hidden = true
+    }
+    
     //MARK: - NSSearchFieldDelegate
     
     override func controlTextDidChange(notification: NSNotification) {

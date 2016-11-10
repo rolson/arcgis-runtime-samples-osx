@@ -9,15 +9,15 @@
             <array>
                 <dict>
                     <key>displayName</key>
-                    <string>Authoring a map</string>
+                    <string>Create and save a map</string>
                     <key>storyboardName</key>
-                    <string>AuthoringMap</string>
+                    <string>CreateSaveMap</string>
                     <key>descriptionText</key>
                     <string>With the new APIs you get to author a map on you mobile device. You can create a map by adding a basemap and one or more operational layers and save it to your portal</string>
                     <key>sourceFileNames</key>
                     <array>
-                        <string>AuthoringMapViewController</string>
-                        <string>AuthoringOptionsViewController</string>
+                        <string>CreateSaveMapViewController</string>
+                        <string>CreateOptionsViewController</string>
                         <string>SaveMapViewController</string>
                     </array>
                 </dict>
@@ -149,30 +149,30 @@
                         <string>SetMapsSRViewController</string>
                     </array>
                 </dict>
-<!--                <dict>-->
-<!--                    <key>displayName</key>-->
-<!--                    <string>Manage operational layers</string>-->
-<!--                    <key>storyboardName</key>-->
-<!--                    <string>ManageMapLayers</string>-->
-<!--                    <key>descriptionText</key>-->
-<!--                    <string>This sample shows you how to manage layers in a map. You can reorder them, delete an existing layer or insert a new layer</string>
- <key>sourceFileNames</key>
- <array>
- <string></string>
- </array>-->
-<!--                </dict>-->
-<!--                <dict>-->
-<!--                    <key>displayName</key>-->
-<!--                    <string>Manage bookmarks</string>-->
-<!--                    <key>storyboardName</key>-->
-<!--                    <string>Bookmarks</string>-->
-<!--                    <key>descriptionText</key>-->
-<!--                    <string>Now you can add and view bookmarks on a map</string>
- <key>sourceFileNames</key>
- <array>
- <string></string>
- </array>-->
-<!--                </dict>-->
+                <!--                <dict>-->
+                <!--                    <key>displayName</key>-->
+                <!--                    <string>Manage operational layers</string>-->
+                <!--                    <key>storyboardName</key>-->
+                <!--                    <string>ManageMapLayers</string>-->
+                <!--                    <key>descriptionText</key>-->
+                <!--                    <string>This sample shows you how to manage layers in a map. You can reorder them, delete an existing layer or insert a new layer</string>
+                 <key>sourceFileNames</key>
+                 <array>
+                 <string></string>
+                 </array>-->
+                <!--                </dict>-->
+                <!--                <dict>-->
+                <!--                    <key>displayName</key>-->
+                <!--                    <string>Manage bookmarks</string>-->
+                <!--                    <key>storyboardName</key>-->
+                <!--                    <string>Bookmarks</string>-->
+                <!--                    <key>descriptionText</key>-->
+                <!--                    <string>Now you can add and view bookmarks on a map</string>
+                 <key>sourceFileNames</key>
+                 <array>
+                 <string></string>
+                 </array>-->
+                <!--                </dict>-->
                 <dict>
                     <key>displayName</key>
                     <string>Display drawing status</string>
@@ -221,56 +221,68 @@
                         <string>ShowMagnifierViewController</string>
                     </array>
                 </dict>
-<!--                <dict>-->
-<!--                    <key>displayName</key>-->
-<!--                    <string>Display device location</string>-->
-<!--                    <key>storyboardName</key>-->
-<!--                    <string>DisplayLocation</string>-->
-<!--                    <key>descriptionText</key>-->
-<!--                    <string>You can start the location display on the map view to get current location updates. There are different auto pan modes you can switch between, namely, re-center mode, navigation mode or compass mode</string>
- <key>sourceFileNames</key>
- <array>
- <string></string>
- </array>-->
-<!--                </dict>-->
-<!--                <dict>-->
-<!--                    <key>displayName</key>-->
-<!--                    <string>Take screenshot</string>-->
-<!--                    <key>storyboardName</key>-->
-<!--                    <string>MapViewScreenshot</string>-->
-<!--                    <key>descriptionText</key>-->
-<!--                    <string>You can now take a screenshot of the map view. You can use it as the thumbnail for you newly created map or simply share it with your co-workers</string>
- <key>sourceFileNames</key>
- <array>
- <string></string>
- </array>-->
-<!--                </dict>-->
+                <!--                <dict>-->
+                <!--                    <key>displayName</key>-->
+                <!--                    <string>Display device location</string>-->
+                <!--                    <key>storyboardName</key>-->
+                <!--                    <string>DisplayLocation</string>-->
+                <!--                    <key>descriptionText</key>-->
+                <!--                    <string>You can start the location display on the map view to get current location updates. There are different auto pan modes you can switch between, namely, re-center mode, navigation mode or compass mode</string>
+                 <key>sourceFileNames</key>
+                 <array>
+                 <string></string>
+                 </array>-->
+                <!--                </dict>-->
+                <!--                <dict>-->
+                <!--                    <key>displayName</key>-->
+                <!--                    <string>Take screenshot</string>-->
+                <!--                    <key>storyboardName</key>-->
+                <!--                    <string>MapViewScreenshot</string>-->
+                <!--                    <key>descriptionText</key>-->
+                <!--                    <string>You can now take a screenshot of the map view. You can use it as the thumbnail for you newly created map or simply share it with your co-workers</string>
+                 <key>sourceFileNames</key>
+                 <array>
+                 <string></string>
+                 </array>-->
+                <!--                </dict>-->
                 <dict>
                     <key>displayName</key>
-                    <string>Authoring a map</string>
+                    <string>Create and save a map</string>
                     <key>storyboardName</key>
-                    <string>AuthoringMap</string>
+                    <string>CreateSaveMap</string>
                     <key>descriptionText</key>
                     <string>With the new APIs you get to author a map on you mobile device. You can create a map by adding a basemap and one or more operational layers and save it to your portal</string>
                     <key>sourceFileNames</key>
                     <array>
-                        <string>AuthoringMapViewController</string>
-                        <string>AuthoringOptionsViewController</string>
+                        <string>CreateSaveMapViewController</string>
+                        <string>CreateOptionsViewController</string>
                         <string>SaveMapViewController</string>
                     </array>
                 </dict>
-<!--                <dict>
+                <dict>
                     <key>displayName</key>
-                    <string>Display layer view status</string>
+                    <string>Identify layers</string>
                     <key>storyboardName</key>
-                    <string>LayerStatus</string>
+                    <string>IdentifyLayers</string>
                     <key>descriptionText</key>
- <string>You can get the view status for each layer in your map. It tells you if the that layer is currently active or not currently visible or if an error occured while loading it etc</string>
- <key>sourceFileNames</key>
- <array>
- <string></string>
- </array>
-                </dict> -->
+                    <string>You can click on map and get all the elements present at that location from different layers</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>IdentifyLayersViewController</string>
+                    </array>
+                </dict>
+                <!--                <dict>
+                 <key>displayName</key>
+                 <string>Display layer view status</string>
+                 <key>storyboardName</key>
+                 <string>LayerStatus</string>
+                 <key>descriptionText</key>
+                 <string>You can get the view status for each layer in your map. It tells you if the that layer is currently active or not currently visible or if an error occured while loading it etc</string>
+                 <key>sourceFileNames</key>
+                 <array>
+                 <string></string>
+                 </array>
+                 </dict> -->
             </array>
         </dict>
         <dict>
@@ -302,18 +314,18 @@
                         <string>MILUsingURLViewController</string>
                     </array>
                 </dict>
-<!--                <dict>-->
-<!--                    <key>displayName</key>-->
-<!--                    <string>Change sublayer visibility</string>-->
-<!--                    <key>storyboardName</key>-->
-<!--                    <string>SublayerVisibility</string>-->
-<!--                    <key>descriptionText</key>-->
-<!--                    <string>You can show or hide individual sublayers in a map image layer</string>
- <key>sourceFileNames</key>
- <array>
- <string></string>
- </array>-->
-<!--                </dict>-->
+                <!--                <dict>-->
+                <!--                    <key>displayName</key>-->
+                <!--                    <string>Change sublayer visibility</string>-->
+                <!--                    <key>storyboardName</key>-->
+                <!--                    <string>SublayerVisibility</string>-->
+                <!--                    <key>descriptionText</key>-->
+                <!--                    <string>You can show or hide individual sublayers in a map image layer</string>
+                 <key>sourceFileNames</key>
+                 <array>
+                 <string></string>
+                 </array>-->
+                <!--                </dict>-->
                 <dict>
                     <key>displayName</key>
                     <string>ArcGIS vector tiled layer (URL)</string>
@@ -324,6 +336,19 @@
                     <key>sourceFileNames</key>
                     <array>
                         <string>VectorTileLayerViewController</string>
+                    </array>
+                </dict>
+                <dict>
+                    <key>displayName</key>
+                    <string>ArcGIS vector tiled layer (custom style)</string>
+                    <key>storyboardName</key>
+                    <string>VectorTileCustomStyle</string>
+                    <key>descriptionText</key>
+                    <string>You can define different styles for same vector tiled layer using custom stylesheets</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>VectorTileCustomStyleVC</string>
+                        <string>VectorStylesViewController</string>
                     </array>
                 </dict>
             </array>
@@ -357,90 +382,136 @@
                         <string>FeatureLayerGDBViewController</string>
                     </array>
                 </dict>
-<!--                <dict>-->
-<!--                    <key>displayName</key>-->
-<!--                    <string>Service feature table (cache)</string>-->
-<!--                    <key>storyboardName</key>-->
-<!--                    <string>OnInteractionCache</string>-->
-<!--                    <key>descriptionText</key>-->
-<!--                    <string>There are different request modes you can load your feature layer in. This sample uses the "On Interaction Cache Mode".</string>
- <key>sourceFileNames</key>
- <array>
- <string></string>
- </array>-->
-<!--                </dict>-->
-<!--                <dict>-->
-<!--                    <key>displayName</key>-->
-<!--                    <string>Service feature table (no cache)</string>-->
-<!--                    <key>storyboardName</key>-->
-<!--                    <string>OnInteractionNoCache</string>-->
-<!--                    <key>descriptionText</key>-->
-<!--                    <string>There are different request modes you can load your feature layer in. This sample uses the "On Interaction No Cache Mode".</string>
- <key>sourceFileNames</key>
- <array>
- <string></string>
- </array>-->
-<!--                </dict>-->
-<!--                <dict>-->
-<!--                    <key>displayName</key>-->
-<!--                    <string>Service feature table (manual cache)</string>-->
-<!--                    <key>storyboardName</key>-->
-<!--                    <string>ManualCache</string>-->
-<!--                    <key>descriptionText</key>-->
-<!--                    <string>There are different request modes you can load your feature layer in. This sample uses the "Manual Cache Mode".</string>
- <key>sourceFileNames</key>
- <array>
- <string></string>
- </array>-->
-<!--                </dict>-->
-<!--                <dict>-->
-<!--                    <key>displayName</key>-->
-<!--                    <string>Feature layer selection</string>-->
-<!--                    <key>storyboardName</key>-->
-<!--                    <string>FLSelection</string>-->
-<!--                    <key>descriptionText</key>-->
-<!--                    <string>You can tap on the map to select or unselect features in a feature layer</string>
- <key>sourceFileNames</key>
- <array>
- <string></string>
- </array>-->
-<!--                </dict>-->
-<!--                <dict>-->
-<!--                    <key>displayName</key>-->
-<!--                    <string>Feature layer query</string>-->
-<!--                    <key>storyboardName</key>-->
-<!--                    <string>FLQuery</string>-->
-<!--                    <key>descriptionText</key>-->
-<!--                    <string>You can query features in feature layer via service feature table. In this sample you can query for States in USA</string>
- <key>sourceFileNames</key>
- <array>
- <string></string>
- </array>-->
-<!--                </dict>-->
-<!--                <dict>-->
-<!--                    <key>displayName</key>-->
-<!--                    <string>Feature layer definition expression</string>-->
-<!--                    <key>storyboardName</key>-->
-<!--                    <string>DefinitionExpression</string>-->
-<!--                    <key>descriptionText</key>-->
-<!--                    <string>You can set the definition expression on the feature layer to load specific features</string>
- <key>sourceFileNames</key>
- <array>
- <string></string>
- </array>-->
-<!--                </dict>-->
-<!--                <dict>-->
-<!--                    <key>displayName</key>-->
-<!--                    <string>Change feature layer renderer</string>-->
-<!--                    <key>storyboardName</key>-->
-<!--                    <string>OverrideRenderer</string>-->
-<!--                    <key>descriptionText</key>-->
-<!--                    <string>The feature layer comes with a default renderer but you can also override this renderer using your custom renderer</string>
- <key>sourceFileNames</key>
- <array>
- <string></string>
- </array>-->
-<!--                </dict>-->
+                <!--                <dict>-->
+                <!--                    <key>displayName</key>-->
+                <!--                    <string>Service feature table (cache)</string>-->
+                <!--                    <key>storyboardName</key>-->
+                <!--                    <string>OnInteractionCache</string>-->
+                <!--                    <key>descriptionText</key>-->
+                <!--                    <string>There are different request modes you can load your feature layer in. This sample uses the "On Interaction Cache Mode".</string>
+                 <key>sourceFileNames</key>
+                 <array>
+                 <string></string>
+                 </array>-->
+                <!--                </dict>-->
+                <!--                <dict>-->
+                <!--                    <key>displayName</key>-->
+                <!--                    <string>Service feature table (no cache)</string>-->
+                <!--                    <key>storyboardName</key>-->
+                <!--                    <string>OnInteractionNoCache</string>-->
+                <!--                    <key>descriptionText</key>-->
+                <!--                    <string>There are different request modes you can load your feature layer in. This sample uses the "On Interaction No Cache Mode".</string>
+                 <key>sourceFileNames</key>
+                 <array>
+                 <string></string>
+                 </array>-->
+                <!--                </dict>-->
+                <!--                <dict>-->
+                <!--                    <key>displayName</key>-->
+                <!--                    <string>Service feature table (manual cache)</string>-->
+                <!--                    <key>storyboardName</key>-->
+                <!--                    <string>ManualCache</string>-->
+                <!--                    <key>descriptionText</key>-->
+                <!--                    <string>There are different request modes you can load your feature layer in. This sample uses the "Manual Cache Mode".</string>
+                 <key>sourceFileNames</key>
+                 <array>
+                 <string></string>
+                 </array>-->
+                <!--                </dict>-->
+                <!--                <dict>-->
+                <!--                    <key>displayName</key>-->
+                <!--                    <string>Feature layer selection</string>-->
+                <!--                    <key>storyboardName</key>-->
+                <!--                    <string>FLSelection</string>-->
+                <!--                    <key>descriptionText</key>-->
+                <!--                    <string>You can tap on the map to select or unselect features in a feature layer</string>
+                 <key>sourceFileNames</key>
+                 <array>
+                 <string></string>
+                 </array>-->
+                <!--                </dict>-->
+                
+                <dict>
+                    <key>displayName</key>
+                    <string>Feature layer query</string>
+                    <key>storyboardName</key>
+                    <string>FeatureLayerQuery</string>
+                    <key>descriptionText</key>
+                    <string>You can query features in feature layer via service feature table. In this sample you can query for States in USA</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>FeatureLayerQueryVC</string>
+                    </array>
+                </dict>
+                
+                <!--                <dict>-->
+                <!--                    <key>displayName</key>-->
+                <!--                    <string>Feature layer definition expression</string>-->
+                <!--                    <key>storyboardName</key>-->
+                <!--                    <string>DefinitionExpression</string>-->
+                <!--                    <key>descriptionText</key>-->
+                <!--                    <string>You can set the definition expression on the feature layer to load specific features</string>
+                 <key>sourceFileNames</key>
+                 <array>
+                 <string></string>
+                 </array>-->
+                <!--                </dict>-->
+                <!--                <dict>-->
+                <!--                    <key>displayName</key>-->
+                <!--                    <string>Change feature layer renderer</string>-->
+                <!--                    <key>storyboardName</key>-->
+                <!--                    <string>OverrideRenderer</string>-->
+                <!--                    <key>descriptionText</key>-->
+                <!--                    <string>The feature layer comes with a default renderer but you can also override this renderer using your custom renderer</string>
+                 <key>sourceFileNames</key>
+                 <array>
+                 <string></string>
+                 </array>-->
+                <!--                </dict>-->
+            </array>
+        </dict>
+        <dict>
+            <key>displayName</key>
+            <string>Edit data</string>
+            <key>children</key>
+            <array>
+                <dict>
+                    <key>displayName</key>
+                    <string>Add features (feature service)</string>
+                    <key>storyboardName</key>
+                    <string>AddFeaturesFS</string>
+                    <key>descriptionText</key>
+                    <string>Click on a location on the map to add a new feature at that location</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>AddFeaturesViewController</string>
+                    </array>
+                </dict>
+                <dict>
+                    <key>displayName</key>
+                    <string>Delete features (feature service)</string>
+                    <key>storyboardName</key>
+                    <string>DeleteFeaturesFS</string>
+                    <key>descriptionText</key>
+                    <string>Click on a feature to select it and then click on the delete button to delete the feature</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>DeleteFeaturesViewController</string>
+                    </array>
+                </dict>
+                <dict>
+                    <key>displayName</key>
+                    <string>Edit features (connected)</string>
+                    <key>storyboardName</key>
+                    <string>EditFeaturesConnected</string>
+                    <key>descriptionText</key>
+                    <string>This sample shows you how to add or edit features in an online feature layer using popups. The new popups provide inline editing for fast editing experience</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>EditFeaturesConnectedVC</string>
+                        <string>FeatureTemplatePickerVC</string>
+                    </array>
+                </dict>
             </array>
         </dict>
         <dict>
@@ -484,18 +555,18 @@
                         <string>GOIdentifyViewController</string>
                     </array>
                 </dict>
-<!--                <dict>-->
-<!--                    <key>displayName</key>-->
-<!--                    <string>Sketch on the map</string>-->
-<!--                    <key>storyboardName</key>-->
-<!--                    <string>Sketch</string>-->
-<!--                    <key>descriptionText</key>-->
-<!--                    <string>You can use the SketchGraphicsOverlay for sketching on your map</string>
- <key>sourceFileNames</key>
- <array>
- <string></string>
- </array>-->
-<!--                </dict>-->
+                <dict>
+                    <key>displayName</key>
+                    <string>Sketch on the map</string>
+                    <key>storyboardName</key>
+                    <string>SketchOnMap</string>
+                    <key>descriptionText</key>
+                    <string>You can use the sketch editor for sketching on your map</string>
+                    <key>sourceFileNames</key>
+                    <array>
+                        <string>SketchOnMapViewController</string>
+                    </array>
+                </dict>
                 <dict>
                     <key>displayName</key>
                     <string>Show callout</string>
@@ -508,18 +579,18 @@
                         <string>CalloutViewController</string>
                     </array>
                 </dict>
-<!--                <dict>-->
-<!--                    <key>displayName</key>-->
-<!--                    <string>Show legend</string>-->
-<!--                    <key>storyboardName</key>-->
-<!--                    <string>MILShowLegend</string>-->
-<!--                    <key>descriptionText</key>-->
-<!--                    <string>Tap on the button in the toolbar to display legends for the layers on the map</string>
- <key>sourceFileNames</key>
- <array>
- <string></string>
- </array>-->
-<!--                </dict>-->
+                <!--                <dict>-->
+                <!--                    <key>displayName</key>-->
+                <!--                    <string>Show legend</string>-->
+                <!--                    <key>storyboardName</key>-->
+                <!--                    <string>MILShowLegend</string>-->
+                <!--                    <key>descriptionText</key>-->
+                <!--                    <string>Tap on the button in the toolbar to display legends for the layers on the map</string>
+                 <key>sourceFileNames</key>
+                 <array>
+                 <string></string>
+                 </array>-->
+                <!--                </dict>-->
                 <dict>
                     <key>displayName</key>
                     <string>Simple marker symbol</string>

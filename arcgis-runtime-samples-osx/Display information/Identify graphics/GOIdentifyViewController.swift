@@ -71,7 +71,14 @@ class GOIdentifyViewController: NSViewController, AGSGeoViewTouchDelegate {
         //use `identifyGraphicsOverlaysAtScreenCoordinate:tolerance:maximumGraphics:completion:` method provided on map view
         let tolerance:Double = 4
         
+        //show progress indicator
+        self.view.window?.showProgressIndicator()
+        
         self.mapView.identifyGraphicsOverlay(self.graphicsOverlay, screenPoint: screenPoint, tolerance: tolerance, returnPopupsOnly: false) { (result: AGSIdentifyGraphicsOverlayResult) in
+            
+            //hide progress indicator
+            self.view.window?.hideProgressIndicator()
+            
             if let error = result.error {
                 print("error while identifying :: \(error.localizedDescription)")
             }

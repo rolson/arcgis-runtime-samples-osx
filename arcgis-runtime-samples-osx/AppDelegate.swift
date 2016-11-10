@@ -15,6 +15,7 @@
 //
 
 import Cocoa
+import ArcGIS
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -23,6 +24,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
+    
+        //AGSArcGISRuntimeEnvironment.setLicenseKey("runtimelite,1000,rud549870135,17-oct-2017,MJJC7XLS1HH7Y0HEY077", error: nil)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {

@@ -27,7 +27,7 @@ class TiledLayerURLViewController: NSViewController {
         super.viewDidLoad()
         
         //create a tiledLayer using url to a map server
-        let tiledLayer = AGSArcGISTiledLayer(URL: NSURL(string: "http://services.arcgisonline.com/arcgis/rest/services/NatGeo_World_Map/MapServer")!)
+        let tiledLayer = AGSArcGISTiledLayer(URL: NSURL(string: "https://services.arcgisonline.com/arcgis/rest/services/NatGeo_World_Map/MapServer")!)
         
         //initialize the map and add the tiled layer as an operational layer
         self.map = AGSMap()

@@ -26,17 +26,16 @@ class SceneSymbolsViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let scene = AGSScene(basemap: AGSBasemap.topographicBasemap())
-        
+        let scene = AGSScene(basemap: AGSBasemap.nationalGeographicBasemap())
         self.sceneView.scene = scene
         
         //set the camera
-        let camera = AGSCamera(latitude: 29, longitude: 45, altitude: 6000, heading: 0, pitch: 0, roll: 0)
+        let camera = AGSCamera(latitude: 48.97, longitude: 4.935, altitude: 2082, heading: 60, pitch: 75, roll: 0)
         self.sceneView.setViewpointCamera(camera)
         
         // add base surface for elevation data
         let surface = AGSSurface()
-        let elevationSource = AGSArcGISTiledElevationSource(URL: NSURL(string: "http://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer")!)
+        let elevationSource = AGSArcGISTiledElevationSource(URL: NSURL(string: "https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer")!)
         surface.elevationSources.append(elevationSource)
         scene.baseSurface = surface
         
@@ -50,8 +49,8 @@ class SceneSymbolsViewController: NSViewController {
     
     private func addGraphics() {
         //coordinates for the first symbol
-        let x = 44.975
-        let y = 29.0
+        let x = 4.975
+        let y = 49.0
         let z = 500.0
         
         //create symbols for all the available 3D symbols

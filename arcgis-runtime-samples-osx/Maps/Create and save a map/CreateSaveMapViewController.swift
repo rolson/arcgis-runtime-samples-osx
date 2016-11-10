@@ -17,7 +17,7 @@
 import Cocoa
 import ArcGIS
 
-class AuthoringMapViewController: NSViewController, AuthoringOptionsVCDelegate, SaveMapVCDelegate {
+class CreateSaveMapViewController: NSViewController, CreateOptionsVCDelegate, SaveMapVCDelegate {
 
     @IBOutlet var mapView:AGSMapView!
     @IBOutlet var optionsContainerView:NSView!
@@ -73,7 +73,7 @@ class AuthoringMapViewController: NSViewController, AuthoringOptionsVCDelegate, 
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "OptionsVCSegue" {
-            let controller = segue.destinationController as! AuthoringOptionsViewController
+            let controller = segue.destinationController as! CreateOptionsViewController
             controller.delegate = self
         }
         else if segue.identifier == "SaveMapVCSegue" {
@@ -82,9 +82,9 @@ class AuthoringMapViewController: NSViewController, AuthoringOptionsVCDelegate, 
         }
     }
     
-    //MARK: - AuthoringOptionsVCDelegate
+    //MARK: - CreateOptionsVCDelegate
     
-    func authoringOptionsViewController(authoringOptionsViewController: AuthoringOptionsViewController, didSelectBasemap basemap: AGSBasemap, layers: [AGSLayer]?) {
+    func createOptionsViewController(createOptionsViewController: CreateOptionsViewController, didSelectBasemap basemap: AGSBasemap, layers: [AGSLayer]?) {
         
         //create a map with the selected basemap
         let map = AGSMap(basemap: basemap)
@@ -96,7 +96,7 @@ class AuthoringMapViewController: NSViewController, AuthoringOptionsVCDelegate, 
         //assign the new map to the map view
         self.mapView.map = map
         
-        //hide the authoring view
+        //hide the create options view
         self.toggleOptionsVC(toggleOn: false)
     }
     
@@ -135,7 +135,7 @@ class AuthoringMapViewController: NSViewController, AuthoringOptionsVCDelegate, 
     }
     
     @IBAction func saveAsAction(sender: AnyObject) {
-        self.portal = AGSPortal(URL: NSURL(string: "http://www.arcgis.com")!, loginRequired: true)
+        self.portal = AGSPortal(URL: NSURL(string: "https://www.arcgis.com")!, loginRequired: true)
         self.portal.loadWithCompletion { (error) -> Void in
             if let error = error {
                 if error.code != NSUserCancelledError {
